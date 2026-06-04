@@ -1,6 +1,6 @@
 # Data Science Portfolio
 
-Master of Applied Data Science student at the University of Canterbury with an interest in data analytics, machine learning, and data-driven decision-making.
+Master of Applied Data Science student/graduate from the University of Canterbury with an interest in data analytics, machine learning, and data-driven decision-making. Open to data science and analytics roles.
 
 ---
 
