@@ -4,7 +4,7 @@ An interactive R Shiny application developed as part of DATA 423 at the Universi
 
 Please use the following link to access it:
 
-`https://bradley1228.shinyapps.io/assignment_01_v3/`
+**Live App:** [Manufacturing Dashboard](https://bradley1228.shinyapps.io/assignment_01_v3/)
 
 ---
 
