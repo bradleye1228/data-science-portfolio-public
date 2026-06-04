@@ -2,32 +2,34 @@
 
 Master of Applied Data Science student at the University of Canterbury with an interest in data analytics, machine learning, and data-driven decision-making.
 
+---
+
 ## Featured Projects
 
 Explore my university projects by visiting the dedicated branches below:
 
-### 1. **Manufacturing Performance Dashboard**
-**Branch:** [`01-manufacturing-dashboard-v2`](../../tree/01-manufacturing-dashboard-v2)
+### 1. Manufacturing Performance Dashboard
+**Branch:** `01-manufacturing-dashboard-v2`
 
-Interactive analytics dashboard for manufacturing data incorporating exploratory data analysis and visualisation techniques to identify operational trends.
+Interactive R Shiny dashboard for exploratory analysis of a manufacturing sensor dataset (360 observations, 30 sensors, 6 years of weekly recordings). Identifies distinct sensor groupings, operator-driven anomalies, missingness patterns, and categorical associations through a range of interactive visualisations.
 
-**Skills:** R, Shiny, Exploratory Data Analysis, and Data Visualisation
+**Skills:** R, Shiny, Exploratory Data Analysis, Data Visualisation
 
 ---
 
-### 2. **Patient Health Analytics Dashboard**
-**Branch:** [`02-patient-health-analytics-v2`](../../tree/02-patient-health-analytics-v2)
+### 2. Patient Health Analytics Dashboard
+**Branch:** `02-patient-health-analytics-v2`
 
-Predictive analytics dashboard evaluating multiple regression models using a recipe-based machine learning workflow. Compares model performance and identifies both the highest-performing model and a more transparent alternative.
+Interactive R Shiny dashboard combining exploratory analysis and predictive modelling on a simulated patient health dataset. Evaluates 27 regression methods within a reproducible caret workflow and selects a best-performing model (Bayesian Regularised Neural Network, test R² = 0.99) alongside a transparent interpretable alternative (glmnet with interaction terms, test R² = 0.98).
 
 **Skills:** R, Shiny, Machine Learning, Regression Modelling, caret
 
 ---
 
-### 3. **NZ Road Crash Interactive Dashboard**
+### 3. NZ Road Crash Interactive Dashboard
 **Branch:** [`03-nz-road-crash-dashboard-v2`](../../tree/03-nz-road-crash-dashboard-v2)
 
-Interactive Streamlit dashboard analysing New Zealand road crash data (2000–2024) from Waka Kotahi. Enables exploration of crash trends, regional patterns, and contributing risk factors through dynamic filtering and visualization.
+Interactive Streamlit dashboard analysing New Zealand road crash data (2000–2024) sourced from Waka Kotahi. Enables exploration of crash trends over time, regional and geographic patterns, and contributing risk factors through dynamic filtering and visualisation.
 
 **Skills:** Python, Streamlit, Geospatial Analysis, Data Visualisation
 
@@ -35,8 +37,7 @@ Interactive Streamlit dashboard analysing New Zealand road crash data (2000–20
 
 ## Contact
 
-**LinkedIn:** [www.linkedin.com/in/eduard-bradley-a7b0241ba/](http://www.linkedin.com/in/eduard-bradley-a7b0241ba/)
-
+**LinkedIn:** [linkedin.com/in/eduard-bradley-a7b0241ba](https://www.linkedin.com/in/eduard-bradley-a7b0241ba/)
 **Email:** [bradleye1228@gmail.com](mailto:bradleye1228@gmail.com)
 
 ---
