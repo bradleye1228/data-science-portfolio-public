@@ -7,7 +7,7 @@ Master of Applied Data Science student at the University of Canterbury with an i
 Explore my university projects by visiting the dedicated branches below:
 
 ### 1. **Manufacturing Performance Dashboard**
-**Branch:** [`01-manufacturing-dashboard`](../../tree/01-manufacturing-dashboard)
+**Branch:** [`01-manufacturing-dashboard-v2`](../../tree/01-manufacturing-dashboard-v2)
 
 Interactive analytics dashboard for manufacturing data incorporating exploratory data analysis and visualisation techniques to identify operational trends.
 
@@ -16,7 +16,7 @@ Interactive analytics dashboard for manufacturing data incorporating exploratory
 ---
 
 ### 2. **Patient Health Analytics Dashboard**
-**Branch:** [`02-patient-health-analytics`](../../tree/02-patient-health-analytics)
+**Branch:** [`02-patient-health-analytics-v2`](../../tree/02-patient-health-analytics-v2)
 
 Predictive analytics dashboard evaluating multiple regression models using a recipe-based machine learning workflow. Compares model performance and identifies both the highest-performing model and a more transparent alternative.
 
@@ -25,7 +25,7 @@ Predictive analytics dashboard evaluating multiple regression models using a rec
 ---
 
 ### 3. **NZ Road Crash Interactive Dashboard**
-**Branch:** [`03-nz-road-crash-dashboard`](../../tree/03-nz-road-crash-dashboard)
+**Branch:** [`03-nz-road-crash-dashboard-v2`](../../tree/03-nz-road-crash-dashboard-v2)
 
 Interactive Streamlit dashboard analysing New Zealand road crash data (2000–2024) from Waka Kotahi. Enables exploration of crash trends, regional patterns, and contributing risk factors through dynamic filtering and visualization.
 
