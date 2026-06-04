@@ -1,13 +1,14 @@
 # Portfolio Structure Overview
 
-This repository serves as the central hub.
+This repository serves as the central hub for my data science project portfolio. Each project lives on its own branch and contains all relevant code, data, and documentation.
 
-Location: data-science-portfolio-public/
+**Location:** `data-science-portfolio-public/`
 
 ---
 
-## Overall Structure:
+## Overall Structure
 
+```
 data-science-portfolio-public/
 │
 ├── 01-manufacturing-dashboard/
@@ -33,52 +34,56 @@ data-science-portfolio-public/
 │   └── README.md
 │
 ├── README.md
-└── PROJECT_STRUCTURE.md
+└── Portfolio Structure Overview.md
+```
 
-
+---
 
 ## Project Directories
 
 ### 01-manufacturing-dashboard
-data-science-portfolio-public/01-manufacturing-dashboard/
+**Branch:** [`01-manufacturing-dashboard-v2`](../../tree/01-manufacturing-dashboard-v2)
 
-- Purpose: Manufacturing KPI dashboard  
-- Tech: R Shiny  
+- **Purpose:** Exploratory data analysis of a manufacturing sensor dataset (360 observations, 30 sensors, 6 years of weekly recordings). Identifies sensor groupings, operator-driven anomalies, missingness patterns, and categorical associations.
+- **Tech:** R, Shiny
 
-Structure:
+```
 code/
 data/
 screenshots/
 docs/
 README.md
+```
 
 ---
 
 ### 02-patient-health-analytics
-data-science-portfolio-public/02-patient-health-analytics/
+**Branch:** [`02-patient-health-analytics-v2`](../../tree/02-patient-health-analytics-v2)
 
-- Purpose: Health analytics + predictive modelling  
-- Tech: R, ML models, caret
+- **Purpose:** Exploratory analysis and predictive modelling on a simulated patient health dataset. Evaluates 27 regression methods and selects a best-performing model (BRNN, test R² = 0.99) alongside a transparent alternative (glmnet with interactions, test R² = 0.98).
+- **Tech:** R, Shiny, caret
 
-Structure:
+```
 code/
 data/
 models/
 screenshots/
 docs/
 README.md
+```
 
 ---
 
 ### 03-nz-road-crash-dashboard
-data-science-portfolio-public/03-nz-road-crash-dashboard/
+**Branch:** [`03-nz-road-crash-dashboard-v2`](../../tree/03-nz-road-crash-dashboard-v2)
 
-- Purpose: Road crash analysis dashboard  
-- Tech: Streamlit / Python  
+- **Purpose:** Interactive analysis of New Zealand road crash data (2000–2024) sourced from Waka Kotahi. Explores crash trends over time, regional patterns, and contributing risk factors.
+- **Tech:** Python, Streamlit
 
-Structure:
+```
 code/
 data/
 screenshots/
 docs/
 README.md
+```
