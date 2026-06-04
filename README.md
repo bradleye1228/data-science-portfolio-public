@@ -25,7 +25,7 @@ Predictive analytics dashboard evaluating multiple regression models using a rec
 ---
 
 ### 3. **NZ Road Crash Interactive Dashboard**
-**Branch:** [`03-nz-road-crash-dashboard`](../../tree/03-nz-road-crash-dashboard)
+**Branch:** [`03-nz-road-crash-dashboard-v2`](../../tree/03-nz-road-crash-dashboard-v2)
 
 Interactive Streamlit dashboard analysing New Zealand road crash data (2000–2024) from Waka Kotahi. Enables exploration of crash trends, regional patterns, and contributing risk factors through dynamic filtering and visualization.
 
