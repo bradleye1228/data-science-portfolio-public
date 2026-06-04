@@ -9,7 +9,7 @@ Master of Applied Data Science student at the University of Canterbury with an i
 Explore my university projects by visiting the dedicated branches below:
 
 ### 1. Manufacturing Performance Dashboard
-**Branch:** `01-manufacturing-dashboard-v2`
+**Branch:** [`01-manufacturing-dashboard-v2`](../../tree/01-manufacturing-dashboard-v2)
 
 Interactive R Shiny dashboard for exploratory analysis of a manufacturing sensor dataset (360 observations, 30 sensors, 6 years of weekly recordings). Identifies distinct sensor groupings, operator-driven anomalies, missingness patterns, and categorical associations through a range of interactive visualisations.
 
@@ -18,7 +18,7 @@ Interactive R Shiny dashboard for exploratory analysis of a manufacturing sensor
 ---
 
 ### 2. Patient Health Analytics Dashboard
-**Branch:** `02-patient-health-analytics-v2`
+**Branch:** [`02-patient-health-analytics-v2`](../../tree/02-patient-health-analytics-v2)
 
 Interactive R Shiny dashboard combining exploratory analysis and predictive modelling on a simulated patient health dataset. Evaluates 27 regression methods within a reproducible caret workflow and selects a best-performing model (Bayesian Regularised Neural Network, test R² = 0.99) alongside a transparent interpretable alternative (glmnet with interaction terms, test R² = 0.98).
 
