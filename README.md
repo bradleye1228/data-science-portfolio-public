@@ -11,6 +11,8 @@ Explore my university projects by visiting the dedicated branches below:
 ### 1. Manufacturing Performance Dashboard
 **Branch:** [`01-manufacturing-dashboard-v2`](../../tree/01-manufacturing-dashboard-v2)
 
+**Live App:** [Manufacturing Dashboard](https://bradley1228.shinyapps.io/assignment_01_v3/)
+
 Interactive R Shiny dashboard for exploratory analysis of a manufacturing sensor dataset (360 observations, 30 sensors, 6 years of weekly recordings). Identifies distinct sensor groupings, operator-driven anomalies, missingness patterns, and categorical associations through a range of interactive visualisations.
 
 **Skills:** R, Shiny, Exploratory Data Analysis, Data Visualisation
