@@ -6,6 +6,37 @@ Location: data-science-portfolio-public/
 
 ---
 
+## Overall Structure:
+
+data-science-portfolio-public/
+│
+├── 01-manufacturing-dashboard/
+│   ├── code/
+│   ├── data/
+│   ├── screenshots/
+│   ├── docs/
+│   └── README.md
+│
+├── 02-patient-health-analytics/
+│   ├── code/
+│   ├── data/
+│   ├── models/
+│   ├── screenshots/
+│   ├── docs/
+│   └── README.md
+│
+├── 03-nz-road-crash-dashboard/
+│   ├── code/
+│   ├── data/
+│   ├── screenshots/
+│   ├── docs/
+│   └── README.md
+│
+├── README.md
+└── PROJECT_STRUCTURE.md
+
+
+
 ## Project Directories
 
 ### 01-manufacturing-dashboard
