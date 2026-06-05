@@ -261,19 +261,24 @@ Candidate methods were selected to ensure broad coverage across distinct regress
 
 *brnn_optim demonstrated the strongest and most stable generalisation performance, with the smallest gap between training and testing error.*
 
-## 2). Best Model Theory Explanation
+## 2) Best Model Theory Explanation
 
-The BRNN extends the standard neural network by introducing a probabilistic regularisation approach to prevent overfitting. The model minimises a total objective function:
-F = β × E_D + α × E_W
+The Bayesian Regularized Neural Network (BRNN) extends a standard neural network by incorporating a probabilistic regularisation framework that helps reduce overfitting and improve model generalisation. Rather than minimising only the prediction error, the BRNN minimises the following objective function:
 
-text
+$$
+F = \beta E_D + \alpha E_W
+$$
 
 where:
-- **E_D** is the sum of squares error (data fit)
-- **E_W** is the sum of squared network weights (model complexity)
-- **β** and **α** control the trade-off between data fit and complexity
 
-Both parameters are estimated during training using Bayesian evidence procedures. The relatively small gap between training RMSE (73.8) and testing RMSE (79.7) suggests the regularisation was functioning as intended.
+- $E_D$ is the sum of squared errors, representing the model's fit to the training data.
+- $E_W$ is the sum of squared network weights, representing model complexity.
+- $\beta$ controls the importance of the data-fitting term.
+- $\alpha$ controls the strength of the weight penalty (regularisation).
+
+During training, both $\alpha$ and $\beta$ are automatically estimated using Bayesian evidence procedures. This allows the model to balance predictive accuracy and complexity without requiring manual tuning of regularisation parameters.
+
+The relatively small difference between the training RMSE (73.8) and testing RMSE (79.7) suggests that the regularisation mechanism was effective, enabling the model to generalise well to unseen data while limiting overfitting.
 
 ---
 
