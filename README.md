@@ -2,13 +2,9 @@
 
 Master of Applied Data Science student/graduate from the University of Canterbury with an interest in data analytics, machine learning, and data-driven decision-making. Open to data science and analytics roles.
 
----
-
 ## Featured Projects
 
 Explore my university projects by visiting the dedicated branches below:
-
----
 
 ### 1. Patient Health Analytics Dashboard
 **Branch:** [`02-patient-health-analytics-v2`](../../tree/02-patient-health-analytics-v2)
@@ -21,8 +17,6 @@ Interactive R Shiny dashboard combining exploratory analysis and predictive mode
 
 ---
 
----
-
 ### 2. Manufacturing Performance Dashboard
 **Branch:** [`01-manufacturing-dashboard-v2`](../../tree/01-manufacturing-dashboard-v2)
 
@@ -31,10 +25,6 @@ Interactive R Shiny dashboard combining exploratory analysis and predictive mode
 Interactive R Shiny dashboard for exploratory analysis of a manufacturing sensor dataset (360 observations, 30 sensors, 6 years of weekly recordings). Identifies distinct sensor groupings, operator-driven anomalies, missingness patterns, and categorical associations through a range of interactive visualisations.
 
 **Skills:** R, Shiny, Exploratory Data Analysis, Data Visualisation
-
----
-
-
 
 ---
 
