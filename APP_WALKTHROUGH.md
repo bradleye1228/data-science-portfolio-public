@@ -209,7 +209,7 @@ Candidate methods were selected to ensure broad coverage across distinct regress
 
 ![Additional Resampling Statistics](screenshots/resampled_stat_2.png)
 
-*Visualisation 14: Additional performance summaries allowing comparison of model variability and consistency.*
+*Visualisation 14: Detected outliers from resampled performance summaries allowing comparison of model variability and consistency.*
 
 ![Resampling Visualisation](screenshots/resampled_vis.png)
 
