@@ -57,7 +57,7 @@ The **ObservationDate** specifies when the results were collected, spanning from
 
 ### Observation Timeline
 
-![Observation Timeline](screenshots/timespan.png)
+![Observation Timeline](screenshots/proper_timeline.png)
 
 *Visualisation 03: Bar graph showing the monthly distribution of recorded observations between 13th September 2013 and 21st September 2021. The distribution of entries is relatively consistent across the 8-year period, with an average of approximately 10 observations recorded per month.*
 
