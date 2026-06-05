@@ -22,6 +22,8 @@ Interactive R Shiny dashboard for exploratory analysis of a manufacturing sensor
 ### 2. Patient Health Analytics Dashboard
 **Branch:** [`02-patient-health-analytics-v2`](../../tree/02-patient-health-analytics-v2)
 
+**Live App:** [Patient Health Analytics Dashboard](https://bradley1228.shinyapps.io/data423_assignment_03/)
+
 Interactive R Shiny dashboard combining exploratory analysis and predictive modelling on a simulated patient health dataset. Evaluates 27 regression methods within a reproducible caret workflow and selects a best-performing model (Bayesian Regularised Neural Network, test R² = 0.99) alongside a transparent interpretable alternative (glmnet with interaction terms, test R² = 0.98).
 
 **Skills:** R, Shiny, Machine Learning, Regression Modelling, caret
