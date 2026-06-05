@@ -19,8 +19,6 @@ The application supports several visualisations to enhance understanding:
 
 The dashboard dynamically reads the CSV crash dataset and supports future updates (provided the column structure remains the same). Filtering options include crash year, severity, speed limits, and region. All of these aspects help users to carry out meaningful and insightful analysis of road safety. 
 
-**[Launch the Dashboard](https://nz-crash-clean-bradley.streamlit.app/)**
-
 
 ## Initial vs Current Programme Behaviour: 
 
@@ -74,7 +72,7 @@ The above text that needs to be entered can also be found at the bottom of the a
 
 5. A new browser tab will open automatically showing the dashboard. If it doesn’t open, copy the local URL printed in the terminal and paste it into your browser. If all else fails, can use the following link:
 
-http://localhost:8501/
+**[Launch the Dashboard](https://nz-crash-clean-bradley.streamlit.app/)**
 
 
 
