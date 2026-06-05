@@ -178,13 +178,15 @@ Candidate methods were selected to ensure broad coverage across distinct regress
 
 ## 2). Candidate Models
 
-![Model Selection](screenshots/select_model.png)
-
-*Visualisation 10: Model selection interface allowing users to investigate candidate models and compare their predictive performance, including RMSE, MAE, R², and resampling results.*
-
 ![Null Model](screenshots/null_model.png)
 
-*Visualisation 11: Null model baseline providing a benchmark for prediction. All candidate models were compared against this baseline to quantify predictive improvement.*
+*Visualisation 10: Null model baseline providing a benchmark for prediction. All candidate models were compared against this baseline to quantify predictive improvement.*
+
+
+![Model Selection](screenshots/select_model.png)
+
+*Visualisation 11: Model selection interface allowing users to investigate candidate models and compare their predictive performance, including RMSE, MAE, R², and resampling results.*
+
 
 ![Model Comparison](screenshots/model_compare.png)
 
