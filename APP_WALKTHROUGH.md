@@ -219,11 +219,11 @@ Candidate methods were selected to ensure broad coverage across distinct regress
 
 ![Optimised Models](screenshots/optimal%20models.png)
 
-*Visualisation 16: Optimised models comparison showing the performance of the four best candidate models after expanded hyperparameter optimisation and bagged imputation.*
+*Visualisation 16: Optimised models comparison showing the performance of the four best candidate models after expanded hyperparameter optimisation and bagged imputation. Training time is also provided*
 
 ![Performance versus Runtime](screenshots/optimal_model_time.png)
 
-*Visualisation 17: Performance versus runtime visualisation demonstrating the trade-off between computational cost and predictive accuracy for optimised models.*
+*Visualisation 17: Runtime visualisation demonstrating the computational cost for each optimised model.*
 
 ![BRNN Resampling Information](screenshots/brnn_resampled_info.png)
 
