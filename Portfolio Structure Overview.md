@@ -46,6 +46,7 @@ data-science-portfolio-public/
 
 - **Purpose:** Exploratory data analysis of a manufacturing sensor dataset (360 observations, 30 sensors, 6 years of weekly recordings). Identifies sensor groupings, operator-driven anomalies, missingness patterns, and categorical associations.
 - **Tech:** R, Shiny
+- **Live App:** [Manufacturing Dashboard](https://bradley1228.shinyapps.io/assignment_01_v3/)
 
 ```
 code/
@@ -62,6 +63,7 @@ README.md
 
 - **Purpose:** Exploratory analysis and predictive modelling on a simulated patient health dataset. Evaluates 27 regression methods and selects a best-performing model (BRNN, test R² = 0.99) alongside a transparent alternative (glmnet with interactions, test R² = 0.98).
 - **Tech:** R, Shiny, caret
+- **Live App:** [Patient Health Analytics Dashboard](https://bradley1228.shinyapps.io/data423_assignment_03/)
 
 ```
 code/
