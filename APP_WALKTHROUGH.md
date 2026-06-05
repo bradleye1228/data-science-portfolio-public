@@ -172,7 +172,7 @@ A static test set consisting of **20% of observations** was reserved for final m
 
 ![Regression Methods](screenshots/caret_regression_methods.png)
 
-*Visualisation 09: Two-dimensional multidimensional scaling (MDS) plot of regression method similarity. Working models retained for analysis are highlighted in blue, while models that failed during training or were excluded due to software incompatibilities are highlighted in red. The grey points represent the broader pool of available caret regression methods. The working methods are spread reasonably well across the plot, indicating that the selection covers a broad range of different regression approaches.*
+*Visualisation 09: Comprehensive overview of all regression models available in the caret framework. For each method, the table presents the underlying package, model classification tags, and tunable hyperparameters, facilitating comparison of available regression approaches.*
 
 Candidate methods were selected to ensure broad coverage across distinct regression modelling families, including linear, nonlinear, parametric, nonparametric, Bayesian, kernel-based, ensemble, and instance-based methods.
 
