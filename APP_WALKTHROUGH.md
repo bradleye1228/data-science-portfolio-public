@@ -288,17 +288,29 @@ The relatively small difference between the training RMSE (73.8) and testing RMS
 
 ## 1). Transparent Model Development
 
-![glmnet Overview](screenshots/glmnet_info.png)
+![New_transparent_01](screenshots/New_transparent_01.png)
 
 *Visualisation 21: glmnet model overview showing the transparent model structure using elastic net regularisation, automatic feature selection, pairwise interaction terms, and coefficient shrinkage.*
 
+
+![new_transparent_02_top_25](screenshots/new_transparent_02_top_25.png)
+
+*Visualisation 22:* Top 25 coefficents out of ____
+
+![new_transparent_03_recipe_info](screenshots/new_transparent_03_recipe_info.png)
+
+*Visualisation 23:* 
+
+
+
+
 ![glmnet Training Results](screenshots/glment%20int%20train.png)
 
-*Visualisation 22: glmnet training results demonstrating the model's ability to explain variation within the dataset while retaining transparency.*
+*Visualisation 24: glmnet training results demonstrating the model's ability to explain variation within the dataset while retaining transparency.*
 
 ![glmnet Testing Results](screenshots/glmnetinter%20test.png)
 
-*Visualisation 23: glmnet testing results showing strong predictive performance. Testing RMSE: 133.4, Testing R²: 0.977.*
+*Visualisation 25: glmnet testing results showing strong predictive performance. Testing RMSE: 133.4, Testing R²: 0.977.*
 
 **Table 05: Transparent Model Comparison**
 
