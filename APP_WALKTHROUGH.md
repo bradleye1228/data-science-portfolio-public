@@ -1,351 +1,384 @@
 # Patient Health Analytics Dashboard - Application Walkthrough
 
+![Patient Health Analytics Dashboard](intro.png)
+
 This document provides a visual walkthrough of the Patient Health Analytics Dashboard developed as part of **DATA 423: Data Science in Industry** at the **University of Canterbury**.
 
-The application combines exploratory data analysis, missing-data investigation, machine learning model selection, model optimisation, and transparent predictive modelling within a single interactive R Shiny dashboard.
-
-The project uses a simulated patient health dataset containing lifestyle variables, laboratory reagent measurements, blood type information, and a continuous biomarker response variable.
+The application combines exploratory data analysis, missing data investigation, machine learning model development, model comparison, hyperparameter optimisation, and transparent predictive modelling within a single interactive R Shiny dashboard.
 
 ---
 
-# Application Overview
+# Dashboard Overview
 
-The dashboard was designed to support the complete data science workflow from initial exploration through to predictive model deployment and interpretation.
+The Patient Health Analytics Dashboard was designed to support the complete data science workflow from raw data exploration through to predictive modelling and model interpretation.
 
-Users can:
+The application allows users to:
 
 * Explore dataset structure and quality
-* Investigate missing-data mechanisms
-* Examine variable relationships
+* Investigate missing values
+* Analyse variable relationships
 * Compare machine learning models
+* Assess model performance
 * Evaluate optimised models
 * Interpret transparent predictive models
-* Inspect model performance metrics
 
 ---
 
-# Welcome Page
+# Introduction Page
 
-The dashboard opens with an introduction describing the project objectives, dataset characteristics, and analytical workflow.
+The dashboard opens with an introduction describing the project objectives, dataset characteristics, analytical workflow, and key findings.
 
-![Introduction Page](images/intro.png)
+![Introduction Page](intro.png)
 
 ### Purpose
 
 * Introduce the dataset
-* Explain dashboard functionality
-* Provide project context
-* Guide users through the available analyses
+* Explain the dashboard structure
+* Summarise analytical objectives
+* Provide navigation guidance
 
 ---
 
 # Dataset Overview
 
-The dataset overview provides a summary of variables, data types, and overall dataset structure.
+The dataset overview provides a summary of variables, data types, and observation structure.
 
-![Dataset Overview](screenshots/dataset.png)
+![Dataset Overview](dataset.png)
 
 ### Dataset Characteristics
 
 * 969 patient observations
 * 21 variables
 * Approximately 97.2% complete
-* Continuous response variable
+* Continuous biomarker response variable
 * Lifestyle predictors
-* Reagent measurements
+* Laboratory reagent measurements
 * Blood type information
 * Observation dates
 
+This section allows users to quickly understand the structure of the data before beginning analysis.
+
+---
+
+# Observation Timeline
+
+The dashboard includes a visualisation showing the distribution of observations through time.
+
+![Observation Timespan](timespan.png)
+
 ### Purpose
 
-This section provides users with a foundation for understanding the data before beginning analysis.
+* Understand temporal coverage
+* Identify potential clustering of observations
+* Assess data collection consistency
+
+The dataset spans observations collected between September 2013 and September 2021.
 
 ---
 
 # Exploratory Data Analysis
 
-The dashboard includes multiple visualisations for understanding distributions, relationships, and variable behaviour.
+The EDA section provides several visualisations for understanding variable distributions and relationships.
 
-## Distribution Analysis
+## Variable Distributions
 
-![Distribution Analysis](screenshots/distribution.png)
+![Distribution Analysis](distribution.png)
 
-Distribution plots allow users to assess skewness, spread, and overall variable behaviour.
+Distribution plots allow users to assess:
+
+* Central tendency
+* Spread
+* Skewness
+* Potential outliers
 
 ---
 
 ## Scatterplot Analysis
 
-![Scatterplot Analysis](screenshots/scatterplot.png)
+![Scatterplot Analysis](scatterplot.png)
 
-Scatterplots help identify relationships between predictors and the response variable.
+Scatterplots provide insight into relationships between predictors and the response variable.
 
-Key relationships include:
+Key observations include:
 
-* Strong negative association between Exercise and Response
-* Positive associations involving Alcohol and Coffee
+* Exercise exhibits a strong negative relationship with Response.
+* Alcohol and Coffee show weaker positive associations.
+* Several predictors demonstrate nonlinear behaviour.
 
 ---
 
 ## Correlation Analysis
 
-![Correlation Heatmap](screenshots/correlation.png)
+![Correlation Matrix](correlation.png)
 
-The correlation matrix highlights relationships among predictors and reveals substantial multicollinearity among reagent variables.
+The correlation heatmap summarises relationships among all numeric variables.
 
-Key finding:
+### Key Findings
 
-Many reagent variables exhibit near-perfect pairwise correlations despite having relatively weak direct relationships with the response variable.
+* Exercise has the strongest correlation with Response.
+* Reagent variables exhibit substantial multicollinearity.
+* Many reagent pairs approach perfect correlation.
 
 ---
 
 ## Pairwise Variable Exploration
 
-![GGPairs Analysis](screenshots/ggpairs.png)
+![GGPairs Analysis](ggpairs.png)
 
-The GGally pairwise plots provide a detailed view of:
+The GGPairs visualisation provides:
 
-* Variable distributions
+* Pairwise scatterplots
 * Correlation coefficients
-* Predictor relationships
-* Potential nonlinear patterns
+* Variable distributions
+* Relationship exploration
+
+This allows detailed investigation of patterns identified in the correlation analysis.
 
 ---
 
 ## Boxplot Analysis
 
-![Boxplot Analysis](screenshots/boxplot.png)
+![Boxplot Analysis](boxplot.png)
 
-Interactive boxplots allow investigation of outliers using adjustable IQR multipliers.
+Interactive boxplots support investigation of variable distributions and potential outliers.
 
-Key finding:
+### Key Finding
 
-Outliers identified under the standard 1.5×IQR rule disappear at approximately 2.3×IQR, suggesting natural distributional tails rather than true anomalies.
+Outliers detected under the standard 1.5×IQR rule disappear when the multiplier is increased to approximately 2.3×, suggesting naturally occurring distribution tails rather than true anomalies.
 
 ---
 
-# Data Quality Assessment
+# Missing Data Investigation
 
-Understanding missing-data behaviour was a critical component of the analysis.
+Understanding missing-data behaviour was a critical component of this project.
 
 ## Missingness Visualisation
 
-![Missing Data Plot](screenshots/missingplot.png)
+![Missingness Plot](missingplot.png)
 
 The missingness heatmap highlights patterns of incomplete observations across reagent variables.
 
-Key finding:
+### Key Findings
 
-193 patients contain missing values while the remaining 776 patients are fully complete.
+* Missing values occur exclusively within reagent variables.
+* 193 patients contain missing observations.
+* Remaining patients are fully complete.
 
----
-
-## Missingness Decision Tree
-
-![Missingness Decision Tree](screenshots/brnn_resampled_info.png)
-
-Decision tree analysis was used to investigate the missing-data mechanism.
-
-Key finding:
-
-Patient identity overwhelmingly predicts missingness, supporting a Missing Not at Random (MNAR) interpretation.
-
-This finding motivated the use of imputation rather than listwise deletion.
+This pattern suggests a structured missing-data mechanism rather than random omission.
 
 ---
 
-# Train-Test Partitioning
+# Model Development Workflow
 
-The dashboard documents the modelling workflow beginning with train-test separation.
+The dashboard documents each stage of the predictive modelling process.
 
-![Train Test Split](screenshots/train_test_split.png)
+## Train-Test Split
+
+![Train Test Split](train_test_split.png)
+
+A dedicated train-test partition was used to ensure unbiased model evaluation.
 
 ### Purpose
 
 * Prevent data leakage
-* Support independent model evaluation
-* Establish reproducible modelling procedures
+* Support reproducible analysis
+* Provide independent model assessment
 
 ---
 
-# Candidate Model Selection
-
-A large-scale model comparison framework was implemented using the caret ecosystem.
-
 ## Available Regression Models
 
-![Candidate Models](screenshots\caret_regression_methods.png)
+![Regression Methods](caret_regression_methods.png)
 
-Twenty-seven regression algorithms were evaluated, including:
+Twenty-seven regression algorithms were evaluated using the caret framework.
+
+Model families include:
 
 * Linear models
-* Regularised regression
+* Penalised regression
 * Support vector machines
 * Neural networks
-* Tree-based methods
-* Gaussian process models
-* Bayesian approaches
+* Bayesian methods
+* Gaussian processes
+* Tree-based models
 
 ---
 
 ## Model Selection Interface
 
-![Model Selection](screenshots/select_model.png)
+![Model Selection](select_model.png)
 
-Users can inspect individual model performance and compare results across candidate algorithms.
-
----
-
-## Null Model Benchmark
-
-![Null Model](screenshots/null_model.png)
-
-The null model establishes a baseline against which all predictive models are compared.
+Users can explore candidate models and compare performance across multiple evaluation metrics.
 
 ---
 
-## Model Performance Comparison
+## Null Model Baseline
 
-![Model Comparison](screenshots/model_compare.png)
+![Null Model](null_model.png)
 
-Performance metrics include:
+The null model provides a benchmark against which all predictive models are compared.
+
+This establishes the minimum level of performance expected from a useful predictive model.
+
+---
+
+## Candidate Model Comparison
+
+![Model Comparison](model_compare.png)
+
+Models are compared using:
 
 * RMSE
 * MAE
 * R²
 
-Key finding:
+### Key Finding
 
-Bayesian Regularised Neural Networks (BRNN) consistently achieved the strongest predictive performance.
+Bayesian Regularised Neural Networks consistently achieved the strongest predictive performance across resamples.
 
 ---
 
-# Resampling Performance Assessment
+# Resampling Assessment
 
-The dashboard provides detailed evaluation of cross-validation and bootstrap performance.
+Model stability and generalisation were assessed using bootstrap resampling.
 
 ## Resampling Statistics
 
-![Resampling Statistics 1](screenshots/resampled_stat_1.png)
+![Resampling Statistics](resampled_stat_1.png)
 
-![Resampling Statistics 2](screenshots/resampled_stat_2.png)
+![Additional Resampling Statistics](resampled_stat_2.png)
+
+These summaries provide insight into model consistency and predictive robustness.
 
 ---
 
 ## Resampling Visualisation
 
-![Resampling Visualisation](screenshots/resampled_vis.png)
+![Resampling Visualisation](resampled_vis.png)
 
-These views allow users to assess:
+Visual comparisons allow users to evaluate:
 
-* Stability
-* Variability
-* Model robustness
+* Model stability
+* Variability between resamples
 * Generalisation potential
 
 ---
 
-# Optimised Model Evaluation
+## BRNN Resampling Information
 
-The top-performing models underwent expanded hyperparameter tuning and enhanced preprocessing.
+![BRNN Resampling Information](brnn_resampled_info.png)
 
-## Optimised Model Summary
-
-![Optimal Models](images/optimal models.png)
-
-The optimisation process included:
-
-* Bagged imputation
-* Expanded tuning grids
-* Bootstrap resampling
-* Hyperparameter optimisation
+Detailed resampling diagnostics are provided for the highest-performing model.
 
 ---
 
-## Performance versus Training Time
+# Optimised Model Performance
 
-![Model Runtime Comparison](screenshots/optimal_model_time.png)
+Following initial model comparison, the strongest models underwent additional optimisation.
 
-This visualisation demonstrates the trade-off between predictive performance and computational cost.
+## Optimised Model Summary
+
+![Optimal Models](optimal models.png)
+
+The optimisation process incorporated:
+
+* Expanded tuning grids
+* Enhanced preprocessing
+* Bagged imputation
+* Additional hyperparameter tuning
+
+---
+
+## Performance vs Computational Cost
+
+![Model Runtime Comparison](optimal_model_time.png)
+
+This visualisation demonstrates the trade-off between model performance and training time.
+
+Users can evaluate whether performance gains justify additional computational expense.
 
 ---
 
 # Best Model: Bayesian Regularised Neural Network
 
-The optimised BRNN achieved the strongest overall performance.
+The optimised BRNN achieved the strongest overall predictive performance.
 
-## Training Predictions
+## Training Performance
 
-![BRNN Training Results](images/brnn train.png)
+![BRNN Training Results](brnn train.png)
+
+The training results demonstrate the model's ability to capture complex nonlinear relationships within the data.
 
 ---
 
-## Test Predictions
+## Testing Performance
 
-![BRNN Test Results](images/brnn test.png)
+![BRNN Testing Results](brnn test.png)
 
-### Performance
+### Performance Summary
 
 * Test RMSE: 79.7
 * Test R²: 0.9916
 
-The small difference between training and testing performance indicates strong generalisation and minimal overfitting.
+The small difference between training and testing performance indicates excellent generalisation and minimal overfitting.
 
 ---
 
 # Transparent Predictive Model
 
-To complement the black-box neural network, an interpretable glmnet model with interaction terms was developed.
+While BRNN provided the strongest predictive performance, a transparent alternative was developed to improve interpretability.
 
 ## glmnet Model Overview
 
-![glmnet Information](screenshots/glmnet_info.png)
+![glmnet Overview](glmnet_info.png)
 
-The model incorporates:
+The transparent model uses:
 
 * L1 regularisation
-* Interaction terms
-* Feature selection
+* Automatic variable selection
+* Pairwise interaction terms
 * Coefficient shrinkage
 
----
-
-## Training Performance
-
-![glmnet Training Performance](images/glment int train.png)
+This provides substantially greater interpretability while maintaining strong predictive performance.
 
 ---
 
-## Test Performance
+## glmnet Training Performance
 
-![glmnet Test Performance](images/glmnetinter test.png)
+![glmnet Training Results](glment int train.png)
 
-### Key Findings
+Training results demonstrate the effectiveness of the interaction-expanded glmnet model.
 
-The transparent model achieved:
+---
+
+## glmnet Testing Performance
+
+![glmnet Testing Results](glmnetinter test.png)
+
+### Performance Summary
 
 * Test RMSE: 133.4
 * Test R²: 0.977
 
-While slightly less accurate than BRNN, it provides substantially greater interpretability.
+Although slightly less accurate than BRNN, the model remains highly competitive while providing full coefficient-level interpretability.
 
 ---
 
-# Dashboard Summary
+# Project Summary
 
-The Patient Health Analytics Dashboard integrates the complete data science workflow into a single interactive application.
+The Patient Health Analytics Dashboard demonstrates the complete data science workflow within a single interactive application.
 
-The dashboard enables users to:
+The project combines:
 
-* Explore patient health data
-* Investigate missing-data mechanisms
-* Assess variable relationships
-* Compare machine learning models
-* Optimise predictive performance
-* Evaluate model robustness
-* Interpret transparent predictive models
+* Exploratory data analysis
+* Missing-data investigation
+* Feature engineering
+* Machine learning model selection
+* Hyperparameter optimisation
+* Model evaluation
+* Explainable predictive modelling
 
-The project demonstrates advanced skills in exploratory data analysis, machine learning, model tuning, predictive modelling, explainable AI, and interactive dashboard development.
+The final BRNN model achieved exceptional predictive performance while the transparent glmnet model provided a practical and interpretable alternative for clinical decision support.
 
 ---
 
@@ -354,11 +387,11 @@ The project demonstrates advanced skills in exploratory data analysis, machine l
 * R
 * Shiny
 * caret
-* glmnet
 * brnn
+* glmnet
+* GGally
 * ggplot2
 * Plotly
-* GGally
 * visdat
 * DT
 * rpart
@@ -369,4 +402,4 @@ The project demonstrates advanced skills in exploratory data analysis, machine l
 
 This project was completed as Assignment 03 for DATA 423 (Data Science in Industry) at the University of Canterbury.
 
-The dataset is a simulated patient health dataset designed to emulate clinical trial data and provide opportunities for advanced predictive modelling and analytical workflows.
+The dataset is a simulated patient health dataset designed to emulate a clinical trial environment and provide opportunities for advanced predictive modelling, data exploration, and machine learning evaluation.
