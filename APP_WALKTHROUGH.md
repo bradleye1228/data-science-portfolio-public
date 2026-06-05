@@ -93,7 +93,7 @@ The **ObservationDate** specifies when the results were collected, spanning from
 
 ![Boxplot Analysis](screenshots/boxplot.png)
 
-*Visualisation 04: Centred and scaled boxplots of all numeric variables using an IQR multiplier of 2.3. The lifestyle variables (Alcohol, Coffee, Exercise, and ChemoTreatments) display comparatively low variability and narrower distributions, while the reagent variables and Response exhibit greater spread and variability across observations.*
+*Visualisation 04: Centred and scaled boxplots of all numeric variables using an IQR multiplier of 1.5. The lifestyle variables (Alcohol, Coffee, Exercise, and ChemoTreatments) display comparatively low variability and narrower distributions, while the reagent variables and Response exhibit greater spread and variability across observations. All outlier observations are detected with 2.3 IQR.*
 
 Boxplots were constructed for all numeric variables using the standard 1.5 IQR rule to identify potential outliers. No outliers were detected for the lifestyle variables. When the IQR multiplier was increased from 1.5 to **2.3**, all detected outliers disappeared across every variable.
 
