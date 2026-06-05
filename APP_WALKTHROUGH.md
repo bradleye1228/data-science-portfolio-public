@@ -295,7 +295,7 @@ The relatively small difference between the training RMSE (73.8) and testing RMS
 
 ![new_transparent_02_top_25](screenshots/new_transparent_02_top_25.png)
 
-*Visualisation 22:* Top 25 coefficents out of ____
+*Visualisation 22:* Top 25 coefficents out of 154.
 
 ![new_transparent_03_recipe_info](screenshots/new_transparent_03_recipe_info.png)
 
