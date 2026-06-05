@@ -1,7 +1,5 @@
 # Patient Health Analytics Dashboard – Modelling Workflow
 
-![Introduction](screenshots/intro.png)
-
 This document provides a visual walkthrough of the **Patient Health Analytics Dashboard**, an interactive R Shiny application developed for **DATA 423: Data Science in Industry** at the **University of Canterbury**.
 
 The dashboard combines exploratory data analysis, missing data investigation, machine learning model comparison, model optimisation, and interpretable predictive modelling within a single application.
