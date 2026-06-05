@@ -129,7 +129,7 @@ A decision tree analysis predicting the number of missing values per observation
 
 ## 1). Missing Data
 
-Given the structured missingness pattern, deletion-based approaches were considered inappropriate. **k-Nearest Neighbours (k-NN) imputation with k=5** was selected as the most appropriate preprocessing strategy.
+Given the structured missingness pattern, deletion-based approaches were considered inappropriate. **k-Nearest Neighbours (k-NN) imputation with k=5** was selected as the most appropriate initial preprocessing strategy.
 
 ## 2). Outliers
 
