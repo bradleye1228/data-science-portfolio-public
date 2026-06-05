@@ -2,6 +2,8 @@
 
 An R Shiny application developed as part of DATA 423 at the University of Canterbury. The application combines exploratory data analysis with a full predictive modelling workflow applied to a simulated patient health dataset (`Ass3Data.csv`), spanning observations recorded between September 2013 and September 2021.
 
+**Live App:** [Patient Health Analytics Dashboard](https://bradley1228.shinyapps.io/data423_assignment_03/)
+
 ---
 
 ## Dataset
