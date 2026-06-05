@@ -5,7 +5,6 @@
 This document provides a visual walkthrough of the **Patient Health Analytics Dashboard**, an interactive R Shiny application developed for **DATA 423: Data Science in Industry** at the **University of Canterbury**.
 
 The dashboard combines exploratory data analysis, missing data investigation, machine learning model comparison, model optimisation, and interpretable predictive modelling within a single application.
-
 **Live App:** [Patient Health Analytics Dashboard](https://bradley1228.shinyapps.io/data423_assignment_03/)
 
 ---
@@ -29,6 +28,8 @@ The dashboard combines exploratory data analysis, missing data investigation, ma
 
 ![Introduction](screenshots/intro.png)
 
+*Visualisation 01: Dashboard introduction page showing the project overview and key findings.*
+
 The dataset used in this data analysis is named `Ass3Data.csv`, which is an artificially generated dataset designed to simulate recorded health data of a particular response variable named **Response**. The dataset has a file size of approximately 323 KB and contains **969 rows** of observations and **21 columns** of variables, giving a total of 20,349 cells.
 
 - **Overall data completeness:** Approximately 97.2%
@@ -39,10 +40,11 @@ The **Patient** column acts as a unique identifier for each individual in the st
 
 The **ObservationDate** specifies when the results were collected, spanning from **13th September 2013 to 21st September 2021** (8.0 years total).
 
-
 ### Dataset Overview
 
 ![Dataset Overview](screenshots/dataset.png)
+
+*Visualisation 02: Dataset overview page summarising the structure and composition of the data.*
 
 **Key Information:**
 - 969 observations, 21 variables
@@ -52,65 +54,73 @@ The **ObservationDate** specifies when the results were collected, spanning from
 - Reagent measurements (ReagentA through ReagentN)
 - Blood type categories
 
+### Observation Timeline
+
+![Observation Timeline](screenshots/timespan.png)
+
+*Visualisation 03: Bar graph showing the monthly distribution of recorded observations between 13th September 2013 and 21st September 2021. The distribution of entries is relatively consistent across the 8-year period, with an average of approximately 10 observations recorded per month.*
+
 ### Numeric Variable Distribution Summary
 
-Table 01: Numeric Variable Distribution and Missingness Summary 
-Variable Min Q1 Median Mean Q3 Max SD N Missing Missing % 
-Alcohol 0 1.01 1.97 2.01 3.06 4 1.16 969 0 0% 
-Coffee 0 1.8 3.55 3.52 5.26 7 2 969 0 0% 
-Exercise 0 2.9 6.17 6.06 9.15 11.99 3.52 969 0 0% 
-ChemoTreatments 0 1.31 2.44 2.48 3.69 4.99 1.41 969 0 0% 
-ReagentA 301.19 613.56 695.8 695.57 776.26 1,020.06 120.83 935 34 3.50% 
-ReagentB 230.42 442.14 501.19 499.74 554.7 725.65 83.35 926 43 4.40% 
-ReagentC 302.8 615.7 698.19 696.88 778.64 1,018.50 121 930 39 4% 
-ReagentD 283.28 534 601.21 600.02 667.53 962.98 100.76 926 43 4.40% 
-ReagentE 71.73 172.5 201.79 201.36 225.58 326.41 39.4 926 43 4.40% 
-ReagentF 288.91 534.39 602.21 600.2 667.14 966.64 100.71 927 42 4.30% 
-ReagentG 304.14 618.74 700.04 699.25 779.98 1,022.25 120.57 928 41 4.20% 
-ReagentH 287.63 535.88 603.07 600.95 668.84 963.11 100.71 936 33 3.40% 
-ReagentI 300.51 616.32 700.07 697.58 779.9 1,022.77 121.15 935 34 3.50% 
-ReagentJ 285.42 533.81 603.05 599.54 665.8 969.72 99.81 922 47 4.90% 
-ReagentK 230.96 439.82 501.12 499.13 553.46 728.64 83.75 918 51 5.30% 
-ReagentL 287.3 532.57 603.11 599.84 666.16 965.98 99.99 934 35 3.60% 
-ReagentM 79.96 171.97 198.97 200.49 225.08 322.47 39.59 927 42 4.30% 
-ReagentN 285.77 534.94 602.47 599.78 665.01 961.71 100.52 917 52 5.40% 
-Response -375.28 2,366.64 2,948.10 2,999.96 3,565.00 6,250.15 916.58 969 0 0% 
+**Table 01: Numeric Variable Distribution and Missingness Summary**
 
-*Table 01: Summary statistics for all numeric variables. Missing values are present only within the reagent variables.*
+| Variable|
+|-|n | Q1 | Median |
+|-|-|-|-||
+|-|-|-|-|-|-||-|-|-|-|-|-|-||-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-||--------|------|-----|-----|-----|-----|---------|-----------|
+| Alcohol | 0 | 1.01 | 1.97 | 2.01 | 3.06 | 4 | 1.16 | 969 | 0 | 0% |
+| Coffee | 0 | 1.8 | 3.55 | 3.52 | 5.26 | 7 | 2 | 969 | 0 | 0% |
+| Exercise | 0 | 2.9 | 6.17 | 6.06 | 9.15 | 11.99 | 3.52 | 969 | 0 | 0% |
+| ChemoTreatments | 0 | 1.31 | 2.44 | 2.48 | 3.69 | 4.99 | 1.41 | 969 | 0 | 0% |
+| ReagentA | 301.19 | 613.56 | 695.8 | 695.57 | 776.26 | 1,020.06 | 120.83 | 935 | 34 | 3.50% |
+| ReagentB | 230.42 | 442.14 | 501.19 | 499.74 | 554.7 | 725.65 | 83.35 | 926 | 43 | 4.40% |
+| ReagentC | 302.8 | 615.7 | 698.19 | 696.88 | 778.64 | 1,018.50 | 121 | 930 | 39 | 4% |
+| ReagentD | 283.28 | 534 | 601.21 | 600.02 | 667.53 | 962.98 | 100.76 | 926 | 43 | 4.40% |
+| ReagentE | 71.73 | 172.5 | 201.79 | 201.36 | 225.58 | 326.41 | 39.4 | 926 | 43 | 4.40% |
+| ReagentF | 288.91 | 534.39 | 602.21 | 600.2 | 667.14 | 966.64 | 100.71 | 927 | 42 | 4.30% |
+| ReagentG | 304.14 | 618.74 | 700.04 | 699.25 | 779.98 | 1,022.25 | 120.57 | 928 | 41 | 4.20% |
+| ReagentH | 287.63 | 535.88 | 603.07 | 600.95 | 668.84 | 963.11 | 100.71 | 936 | 33 | 3.40% |
+| ReagentI | 300.51 | 616.32 | 700.07 | 697.58 | 779.9 | 1,022.77 | 121.15 | 935 | 34 | 3.50% |
+| ReagentJ | 285.42 | 533.81 | 603.05 | 599.54 | 665.8 | 969.72 | 99.81 | 922 | 47 | 4.90% |
+| ReagentK | 230.96 | 439.82 | 501.12 | 499.13 | 553.46 | 728.64 | 83.75 | 918 | 51 | 5.30% |
+| ReagentL | 287.3 | 532.57 | 603.11 | 599.84 | 666.16 | 965.98 | 99.99 | 934 | 35 | 3.60% |
+| ReagentM | 79.96 | 171.97 | 198.97 | 200.49 | 225.08 | 322.47 | 39.59 | 927 | 42 | 4.30% |
+| ReagentN | 285.77 | 534.94 | 602.47 | 599.78 | 665.01 | 961.71 | 100.52 | 917 | 52 | 5.40% |
+| Response | -375.28 | 2,366.64 | 2,948.10 | 2,999.96 | 3,565.00 | 6,250.15 | 916.58 | 969 | 0 | 0% |
+
+*Table 01 summarises the distribution and missingness for all numeric variables. Missing values are present only within the reagent variables, whereas Alcohol, Coffee, Exercise, ChemoTreatments, and Response contain complete observations.*
 
 ## 2). Boxplot Analysis
 
 ![Boxplot Analysis](screenshots/boxplot.png)
 
+*Visualisation 04: Centred and scaled boxplots of all numeric variables using an IQR multiplier of 2.3. The lifestyle variables (Alcohol, Coffee, Exercise, and ChemoTreatments) display comparatively low variability and narrower distributions, while the reagent variables and Response exhibit greater spread and variability across observations.*
+
 Boxplots were constructed for all numeric variables using the standard 1.5 IQR rule to identify potential outliers. No outliers were detected for the lifestyle variables. When the IQR multiplier was increased from 1.5 to **2.3**, all detected outliers disappeared across every variable.
 
-
-
-*Visualisation 02: Centred and scaled boxplots of all numeric variables using an IQR multiplier of 2.3. The lifestyle variables display comparatively low variability, while the reagent variables and Response exhibit greater spread.*
-
 ## 3). Correlation Analysis
+
+![Correlation Matrix](screenshots/correlation.png)
+
+*Visualisation 05: Pearson correlation heatmap for all numeric variables, including observations containing missing reagent entries. The heatmap shows generally weak correlations between most variables, with Exercise displaying the strongest relationship with Response (r = −0.57). Several reagent variables exhibit extremely strong positive correlations with one another, indicating substantial multicollinearity.*
 
 The Pearson correlation heatmap shows the linear relationships between all numeric variables. **Exercise** shows the strongest relationship with Response, with a moderate negative correlation of **r = −0.57**. Alcohol and Coffee both show weak positive correlations with Response (r = 0.38 and r = 0.29, respectively).
 
 The reagent variables display several very strong positive correlations with one another, with many pairs approaching **r = 1.00**, indicating substantial multicollinearity.
 
-![Correlation Matrix](screenshots/correlation.png)
-
-*Visualisation 03: Pearson correlation heatmap for all numeric variables. Several reagent variables exhibit extremely strong positive correlations, suggesting that some reagents may represent closely related biological measurements.*
-
 ## 4). Pairwise Variable Relationships
 
 ![GGPairs Analysis](screenshots/ggpairs.png)
 
-*The GGPairs visualisation provides pairwise scatterplots, correlation coefficients, and variable distributions for detailed relationship exploration.*
+*Visualisation 06: GGPairs visualisation providing pairwise scatterplots, correlation coefficients, and variable distributions for detailed relationship exploration. This allows users to investigate patterns identified during correlation analysis.*
 
 ## 5). Missingness Heatmap and Tree
 
-Missing values are limited to the reagent measurements only, ranging from 3.4% (ReagentH) to 5.3% (ReagentN) of observations. However, further investigation reveals that missingness is **not random** but systematically concentrated within a specific subset of 193 patients, each having exactly three missing reagent values.
-
 ![Missingness Plot](screenshots/missingplot.png)
 
-*Visualisation 04: Missingness heatmap showing the distribution of NULL values across the reagent variables.*
+*Visualisation 07: Missingness heatmap showing the distribution of NULL values across the reagent variables. Missing values are limited to the reagent measurements, ranging from 3.4% (ReagentH) to 5.3% (ReagentN) of observations. While the heatmap suggests dispersion throughout the dataset, further analysis reveals that missingness is systematically concentrated within a specific subset of patients.*
+
+Missing values are limited to the reagent measurements only, ranging from 3.4% (ReagentH) to 5.3% (ReagentN) of observations. However, further investigation reveals that missingness is **not random** but systematically concentrated within a specific subset of 193 patients, each having exactly three missing reagent values.
 
 A decision tree analysis predicting the number of missing values per observation shows that missingness is almost entirely explained by the Patient variable, providing strong evidence that the missing data mechanism is **Missing Not at Random (MNAR)**.
 
@@ -149,9 +159,11 @@ The chosen recipe applied to all candidate methods followed:
 
 ## 5). Tuning and Assessing
 
-A static test set consisting of **20% of observations** was reserved for final model assessment. Hyperparameter optimisation was conducted using **25 bootstrap resamples** of the training data. Fixed random seeds were applied throughout (seed 199 for partition, seed 673 for resampling).
-
 ![Train Test Split](screenshots/train_test_split.png)
+
+*Visualisation 08: Train-test partition visualisation. A static test set consisting of 20% of observations was reserved for final model assessment. The dataset was separated into training and testing subsets before any modelling was performed to prevent data leakage and support independent model evaluation.*
+
+A static test set consisting of **20% of observations** was reserved for final model assessment. Hyperparameter optimisation was conducted using **25 bootstrap resamples** of the training data. Fixed random seeds were applied throughout (seed 199 for partition, seed 673 for resampling).
 
 ---
 
@@ -159,11 +171,13 @@ A static test set consisting of **20% of observations** was reserved for final m
 
 ## 1). Candidate Methods
 
-Candidate methods were selected to ensure broad coverage across distinct regression modelling families, including linear, nonlinear, parametric, nonparametric, Bayesian, kernel-based, ensemble, and instance-based methods.
-
 ![Regression Methods](screenshots/caret_regression_methods.png)
 
-*Visualisation 06: Two-dimensional MDS plot of regression method similarity. Working models retained for analysis are highlighted in blue, while models that failed are highlighted in red.*
+*Visualisation 09: Two-dimensional multidimensional scaling (MDS) plot of regression method similarity. Working models retained for analysis are highlighted in blue, while models that failed during training or were excluded due to software incompatibilities are highlighted in red. The grey points represent the broader pool of available caret regression methods. The working methods are spread reasonably well across the plot, indicating that the selection covers a broad range of different regression approaches.*
+
+Candidate methods were selected to ensure broad coverage across distinct regression modelling families, including linear, nonlinear, parametric, nonparametric, Bayesian, kernel-based, ensemble, and instance-based methods.
+# Part C: Methods
+
 
 ## 2). Candidate Models
 
