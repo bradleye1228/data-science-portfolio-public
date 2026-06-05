@@ -31,7 +31,9 @@ Interactive R Shiny dashboard combining exploratory analysis and predictive mode
 ---
 
 ### 3. NZ Road Crash Interactive Dashboard
-**Branch:** [`03-nz-road-crash-dashboard-v2`](../../tree/03-nz-road-crash-dashboard-v2)
+**Branch:** [`03-nz-road-crash-dashboard-clean`](../../tree/03-nz-road-crash-dashboard-clean)
+
+**Live App:** [NZ Road Crash Interactive Dashboard](https://nz-crash-clean-bradley.streamlit.app/)
 
 Interactive Streamlit dashboard analysing New Zealand road crash data (2000–2024) sourced from Waka Kotahi. Enables exploration of crash trends over time, regional and geographic patterns, and contributing risk factors through dynamic filtering and visualisation.
 
