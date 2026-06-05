@@ -30,7 +30,7 @@ The primary objective was to identify predictors of the response variable and de
 
 The application begins with an overview page describing the project, dataset, analytical workflow, and key findings.
 
-![Introduction Page](intro.png)
+![Introduction Page](screenshots/intro.png)
 
 This section provides context for the analysis and guides users through the dashboard's functionality.
 
@@ -40,7 +40,7 @@ This section provides context for the analysis and guides users through the dash
 
 The dataset overview summarises the structure and composition of the data.
 
-![Dataset Overview](dataset.png)
+![Dataset Overview](screenshots/dataset.png)
 
 ### Key Information
 
@@ -60,7 +60,7 @@ This section allows users to familiarise themselves with the available data befo
 
 Observation dates span approximately eight years.
 
-![Observation Timeline](timespan.png)
+![Observation Timeline](screenshots/timespan.png)
 
 The timeline visualisation helps users understand the temporal distribution of observations and identify any potential clustering or collection patterns.
 
@@ -74,7 +74,7 @@ The EDA section provides multiple visualisations for understanding the character
 
 ## Variable Distributions
 
-![Distribution Analysis](distribution.png)
+![Distribution Analysis](screenshots/distribution.png)
 
 Distribution plots allow users to examine:
 
@@ -103,7 +103,7 @@ Scatterplots allow direct investigation of relationships between predictors and 
 
 ## Correlation Analysis
 
-![Correlation Matrix](correlation.png)
+![Correlation Matrix](screenshots/correlation.png)
 
 The correlation matrix summarises relationships among all numeric variables.
 
@@ -119,7 +119,7 @@ This analysis was critical for understanding the underlying structure of the dat
 
 ## Pairwise Variable Relationships
 
-![GGPairs Analysis](ggpairs.png)
+![GGPairs Analysis](screenshots/ggpairs.png)
 
 The GGPairs visualisation provides:
 
@@ -134,7 +134,7 @@ This allows users to investigate patterns identified during correlation analysis
 
 ## Boxplot Analysis
 
-![Boxplot Analysis](boxplot.png)
+![Boxplot Analysis](screenshots/boxplot.png)
 
 Interactive boxplots support investigation of variable distributions and outlier behaviour.
 
@@ -150,7 +150,7 @@ Understanding missing-data behaviour formed an important component of the projec
 
 ## Missingness Visualisation
 
-![Missingness Plot](missingplot.png)
+![Missingness Plot](screenshots/missingplot.png)
 
 The missingness heatmap reveals structured missingness among reagent variables.
 
@@ -172,7 +172,7 @@ The dashboard documents each stage of the predictive modelling process.
 
 ## Train-Test Partitioning
 
-![Train Test Split](train_test_split.png)
+![Train Test Split](screenshots/train_test_split.png)
 
 The dataset was separated into training and testing subsets before any modelling was performed.
 
@@ -186,7 +186,7 @@ The dataset was separated into training and testing subsets before any modelling
 
 ## Available Regression Methods
 
-![Regression Methods](caret_regression_methods.png)
+![Regression Methods](screenshots/caret_regression_methods.png)
 
 Twenty-seven regression algorithms were evaluated using the caret framework.
 
@@ -206,7 +206,7 @@ This broad comparison ensured that both simple and complex modelling approaches 
 
 ## Model Selection Interface
 
-![Model Selection](select_model.png)
+![Model Selection](screenshots/select_model.png)
 
 The dashboard allows users to investigate candidate models and compare their predictive performance.
 
@@ -221,7 +221,7 @@ Users can review:
 
 ## Null Model Baseline
 
-![Null Model](null_model.png)
+![Null Model](screenshots/null_model.png)
 
 The null model provides a baseline prediction benchmark.
 
@@ -231,7 +231,7 @@ All candidate models were compared against this baseline to quantify predictive 
 
 ## Model Comparison Results
 
-![Model Comparison](model_compare.png)
+![Model Comparison](screenshots/model_compare.png)
 
 Cross-validated performance metrics were compared across all 27 regression methods.
 
@@ -256,7 +256,7 @@ Bootstrap resampling was used to evaluate model stability and generalisation per
 
 ## Resampling Statistics
 
-![Resampling Statistics](resampled_stat_1.png)
+![Resampling Statistics](screenshots/resampled_stat_1.png)
 
 The first summary presents key performance statistics across bootstrap resamples.
 
@@ -264,7 +264,7 @@ The first summary presents key performance statistics across bootstrap resamples
 
 ## Additional Resampling Statistics
 
-![Additional Resampling Statistics](resampled_stat_2.png)
+![Additional Resampling Statistics](screenshots/resampled_stat_2.png)
 
 Additional performance summaries allow comparison of model variability and consistency.
 
@@ -272,7 +272,7 @@ Additional performance summaries allow comparison of model variability and consi
 
 ## Resampling Visualisation
 
-![Resampling Visualisation](resampled_vis.png)
+![Resampling Visualisation](screenshots/resampled_vis.png)
 
 These visualisations help assess:
 
@@ -284,7 +284,7 @@ These visualisations help assess:
 
 ## BRNN Resampling Information
 
-![BRNN Resampling Information](brnn_resampled_info.png)
+![BRNN Resampling Information](screenshots/brnn_resampled_info.png)
 
 Detailed diagnostics are provided for the highest-performing BRNN model.
 
@@ -315,7 +315,7 @@ This process further improved predictive performance.
 
 ## Performance versus Runtime
 
-![Performance versus Runtime](optimal_model_time.png)
+![Performance versus Runtime](screenshots/optimal_model_time.png)
 
 This visualisation demonstrates the trade-off between computational cost and predictive accuracy.
 
@@ -358,7 +358,7 @@ Although BRNN provided the best predictive performance, an interpretable alterna
 
 ## glmnet Model Overview
 
-![glmnet Overview](glmnet_info.png)
+![glmnet Overview](screenshots/glmnet_info.png)
 
 The transparent model uses:
 
