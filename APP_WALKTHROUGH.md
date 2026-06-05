@@ -185,7 +185,7 @@ Candidate methods were selected to ensure broad coverage across distinct regress
 
 ![Model Selection](screenshots/select_model.png)
 
-*Visualisation 11: Model selection interface allowing users to investigate candidate models and compare their predictive performance, including RMSE, MAE, R², and resampling results.*
+*Visualisation 11: Model selection interface allowing users to investigate candidate models following training and compare their predictive performance, including RMSE, MAE, R², and resampling results.*
 
 
 ![Model Comparison](screenshots/model_compare.png)
