@@ -1,11 +1,11 @@
-===========================================================================================================================================
-README FILE | Semester 1, 2025, COSC480 A3 Project | Intereactive Crash Data Dashboard (NZ) 
-===========================================================================================================================================
+---
+# README FILE | Semester 1, 2025, COSC480 A3 Project | Intereactive Crash Data Dashboard (NZ) 
+---
 
 Author: Eduard Bradley, 13241805
 Date: 01/06/2025
 
-# Project Overview: 
+## Project Overview: 
 
 The aim of this project for A3 was to develop an interactive dashboard that analysing of road crash data in New Zealand. The dataset that was sourced from Waka Kotahi (NZ Transport Agency) and contains reported crashes from 2000 to 2024 in its current form.  
 
@@ -19,9 +19,10 @@ The application supports several visualisations to enhance understanding:
 
 The dashboard dynamically reads the CSV crash dataset and supports future updates (provided the column structure remains the same). Filtering options include crash year, severity, speed limits, and region. All of these aspects help users to carry out meaningful and insightful analysis of road safety. 
 
+**[Launch the Dashboard](https://nz-crash-clean-bradley.streamlit.app/)**
 
 
-# Initial vs Current Programme Behaviour: 
+## Initial vs Current Programme Behaviour: 
 
 The original version of the programme (from A1 and A2) provided basic static reports of crash data. Users could select a specific year and speed limit to generate a summary crash severity table. A time-series graph allowed to select a year range and severity type as well. However, both these features required restarting the script to change filters each time. There was no geographic filtering or real-time interactivity. 
 
@@ -37,7 +38,7 @@ Example: A user may filter for “Fatal Crashes between 2015 and 2020 on roads w
 
 
 
-# Dependencies and Data Sources:
+## Dependencies and Data Sources:
 
 Python Libraries:
 
@@ -53,7 +54,7 @@ Data sources:
 
 
 
-# How to Use:
+## How to Use:
 
 This application is designed to run through the terminal in Visual Studio Code (VS Code). Please follow these steps to launch the interactive dashboard:
 
@@ -77,7 +78,7 @@ http://localhost:8501/
 
 
 
-# Key Achievements:
+## Key Achievements:
 
 1.	Interactive Mapping:
 Created a choropleth map by merging crash data with regional shapefiles. This visualisation uses colour gradients (from pale yellow to deep red) to represent crash density. Regions like Auckland, Waikato, and Canterbury often show higher crash counts under various filters.
@@ -93,7 +94,7 @@ Designed clear, uncluttered charts. Region labels on maps are well positioned an
 
 
 
-# Student-Led Innovations:
+## Student-Led Innovations:
 
 •	Geospatial Integration:
 Merged CSV crash data with regional shapefiles using GeoPandas and resoved discrepancies in region names (e.g., mapping “Auckland Region” to “Auckland”) and excluded “Other Region Areas” from the visualisation. 
@@ -106,7 +107,7 @@ Employed Streamlit’s expanders to simplify the layout and reduce visual clutte
 
 
 
-# Citations:
+## Citations:
 __________
 
 •  Waka Kotahi. (2024). Crash Analysis System (CAS) data. Licensed under CC BY 4.0. https://opendata-nzta.opendata.arcgis.com/datasets/8d684f1841fa4dbea6afaefc8a1ba0fc_0/explore
