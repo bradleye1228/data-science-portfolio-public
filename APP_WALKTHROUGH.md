@@ -2,8 +2,6 @@
 
 **Author:** Eduard Bradley, 13241805
 
-![Introduction](screenshots/intro.png)
-
 This document provides a visual walkthrough of the **Patient Health Analytics Dashboard**, an interactive R Shiny application developed for **DATA 423: Data Science in Industry** at the **University of Canterbury**.
 
 The dashboard combines exploratory data analysis, missing data investigation, machine learning model comparison, model optimisation, and interpretable predictive modelling within a single application.
@@ -27,6 +25,8 @@ The dashboard combines exploratory data analysis, missing data investigation, ma
 
 ## 1). Introduce Data
 
+![Introduction](screenshots/intro.png)
+
 The dataset used in this data analysis is named `Ass3Data.csv`, which is an artificially generated dataset designed to simulate recorded health data of a particular response variable named **Response**. The dataset has a file size of approximately 323 KB and contains **969 rows** of observations and **21 columns** of variables, giving a total of 20,349 cells.
 
 - **Overall data completeness:** Approximately 97.2%
@@ -37,9 +37,6 @@ The **Patient** column acts as a unique identifier for each individual in the st
 
 The **ObservationDate** specifies when the results were collected, spanning from **13th September 2013 to 21st September 2021** (8.0 years total).
 
-![Observation Timeline](screenshots/timespan.png)
-
-*Visualisation 01: Bar graph showing the monthly distribution of recorded observations between 13th September 2013 and 21st September 2021. The distribution of entries is relatively consistent across the 8-year period, with an average of approximately 10 observations recorded per month.*
 
 ### Dataset Overview
 
