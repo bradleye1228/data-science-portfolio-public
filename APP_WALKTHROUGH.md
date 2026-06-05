@@ -306,22 +306,39 @@ The relatively small difference between the training RMSE (73.8) and testing RMS
 | **GLMNET (with interactions)** | **154.24** | **0.97** | **8m 47s** |
 | Null model | 923.14 | N/A | 1.1s |
 
-## 2). Transparent Model Theory Explanation
+## 2) Transparent Model Theory Explanation
 
-The glmnet algorithm combines both L1 (lasso) and L2 (ridge) regularisation penalties. The L1 component is particularly important for interpretability, as it shrinks some coefficients to exactly zero, allowing for the removal of irrelevant predictors.
+The **glmnet** algorithm combines both L1 (Lasso) and L2 (Ridge) regularisation penalties through the Elastic Net framework. The L1 component is particularly valuable for interpretability because it can shrink some coefficients exactly to zero, effectively performing automatic feature selection and removing less important predictors from the model.
 
 The prediction equation remains fully interpretable:
-ŷ = β₀ + Σ βⱼ xⱼ
 
-text
+$$
+\hat{y} = \beta_0 + \sum_{j=1}^{p} \beta_j x_j
+$$
 
-where β₀ = 3089.82 (intercept) and each βⱼ coefficient quantifies the contribution of predictor xⱼ.
+where:
 
-**Key coefficients from the final model:**
-- **Exercise: −543.19** (highest negative influence)
-- **Alcohol: +352.24** (strong positive contribution)
-- **Coffee: +311.53** (strong positive contribution)
-- **ReagentF × BloodType_B: −315.73** (interaction effect)
+- $\beta_0$ is the intercept term.
+- $\beta_j$ represents the coefficient associated with predictor $x_j$.
+- $x_j$ represents the value of predictor $j$.
+- $\hat{y}$ is the predicted response value.
+
+For the final model, the estimated intercept was:
+
+$$
+\beta_0 = 3089.82
+$$
+
+Each coefficient quantifies the expected change in the predicted outcome associated with a one-unit increase in the corresponding predictor, holding all other variables constant.
+
+### Key Coefficients from the Final Model
+
+- **Exercise:** $-543.19$ (largest negative influence on the predicted outcome)
+- **Alcohol:** $+352.24$ (strong positive contribution)
+- **Coffee:** $+311.53$ (strong positive contribution)
+- **ReagentF × BloodType_B:** $-315.73$ (negative interaction effect)
+
+The sparse nature of the glmnet model allows important predictors to be identified directly from the coefficient estimates, making the model substantially more interpretable than many complex machine learning alternatives while still maintaining strong predictive performance.
 
 ---
 
