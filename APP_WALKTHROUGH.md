@@ -43,7 +43,7 @@ The dashboard opens with an introduction describing the project objectives, data
 
 The dataset overview provides a summary of variables, data types, and overall dataset structure.
 
-![Dataset Overview](images/dataset.png)
+![Dataset Overview](screenshots/dataset.png)
 
 ### Dataset Characteristics
 
@@ -68,7 +68,7 @@ The dashboard includes multiple visualisations for understanding distributions, 
 
 ## Distribution Analysis
 
-![Distribution Analysis](images/distribution.png)
+![Distribution Analysis](screenshots/distribution.png)
 
 Distribution plots allow users to assess skewness, spread, and overall variable behaviour.
 
@@ -76,7 +76,7 @@ Distribution plots allow users to assess skewness, spread, and overall variable 
 
 ## Scatterplot Analysis
 
-![Scatterplot Analysis](images/scatterplot.png)
+![Scatterplot Analysis](screenshots/scatterplot.png)
 
 Scatterplots help identify relationships between predictors and the response variable.
 
@@ -89,7 +89,7 @@ Key relationships include:
 
 ## Correlation Analysis
 
-![Correlation Heatmap](images/correlation.png)
+![Correlation Heatmap](screenshots/correlation.png)
 
 The correlation matrix highlights relationships among predictors and reveals substantial multicollinearity among reagent variables.
 
@@ -101,7 +101,7 @@ Many reagent variables exhibit near-perfect pairwise correlations despite having
 
 ## Pairwise Variable Exploration
 
-![GGPairs Analysis](images/ggpairs.png)
+![GGPairs Analysis](screenshots/ggpairs.png)
 
 The GGally pairwise plots provide a detailed view of:
 
@@ -114,7 +114,7 @@ The GGally pairwise plots provide a detailed view of:
 
 ## Boxplot Analysis
 
-![Boxplot Analysis](images/boxplot.png)
+![Boxplot Analysis](screenshots/boxplot.png)
 
 Interactive boxplots allow investigation of outliers using adjustable IQR multipliers.
 
@@ -130,7 +130,7 @@ Understanding missing-data behaviour was a critical component of the analysis.
 
 ## Missingness Visualisation
 
-![Missing Data Plot](images/missingplot.png)
+![Missing Data Plot](screenshots/missingplot.png)
 
 The missingness heatmap highlights patterns of incomplete observations across reagent variables.
 
@@ -142,7 +142,7 @@ Key finding:
 
 ## Missingness Decision Tree
 
-![Missingness Decision Tree](images/brnn_resampled_info.png)
+![Missingness Decision Tree](screenshots/brnn_resampled_info.png)
 
 Decision tree analysis was used to investigate the missing-data mechanism.
 
@@ -158,7 +158,7 @@ This finding motivated the use of imputation rather than listwise deletion.
 
 The dashboard documents the modelling workflow beginning with train-test separation.
 
-![Train Test Split](images/train_test_split.png)
+![Train Test Split](screenshots/train_test_split.png)
 
 ### Purpose
 
@@ -174,7 +174,7 @@ A large-scale model comparison framework was implemented using the caret ecosyst
 
 ## Available Regression Models
 
-![Candidate Models](images\caret_regression_methods.png)
+![Candidate Models](screenshots\caret_regression_methods.png)
 
 Twenty-seven regression algorithms were evaluated, including:
 
@@ -190,7 +190,7 @@ Twenty-seven regression algorithms were evaluated, including:
 
 ## Model Selection Interface
 
-![Model Selection](images/select_model.png)
+![Model Selection](screenshots/select_model.png)
 
 Users can inspect individual model performance and compare results across candidate algorithms.
 
@@ -198,7 +198,7 @@ Users can inspect individual model performance and compare results across candid
 
 ## Null Model Benchmark
 
-![Null Model](images/null_model.png)
+![Null Model](screenshots/null_model.png)
 
 The null model establishes a baseline against which all predictive models are compared.
 
@@ -206,7 +206,7 @@ The null model establishes a baseline against which all predictive models are co
 
 ## Model Performance Comparison
 
-![Model Comparison](images/model_compare.png)
+![Model Comparison](screenshots/model_compare.png)
 
 Performance metrics include:
 
@@ -226,15 +226,15 @@ The dashboard provides detailed evaluation of cross-validation and bootstrap per
 
 ## Resampling Statistics
 
-![Resampling Statistics 1](images/resampled_stat_1.png)
+![Resampling Statistics 1](screenshots/resampled_stat_1.png)
 
-![Resampling Statistics 2](images/resampled_stat_2.png)
+![Resampling Statistics 2](screenshots/resampled_stat_2.png)
 
 ---
 
 ## Resampling Visualisation
 
-![Resampling Visualisation](images/resampled_vis.png)
+![Resampling Visualisation](screenshots/resampled_vis.png)
 
 These views allow users to assess:
 
@@ -264,7 +264,7 @@ The optimisation process included:
 
 ## Performance versus Training Time
 
-![Model Runtime Comparison](images/optimal_model_time.png)
+![Model Runtime Comparison](screenshots/optimal_model_time.png)
 
 This visualisation demonstrates the trade-off between predictive performance and computational cost.
 
@@ -299,7 +299,7 @@ To complement the black-box neural network, an interpretable glmnet model with i
 
 ## glmnet Model Overview
 
-![glmnet Information](images/glmnet_info.png)
+![glmnet Information](screenshots/glmnet_info.png)
 
 The model incorporates:
 
