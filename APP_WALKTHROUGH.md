@@ -6,6 +6,8 @@ This document provides a visual walkthrough of the **Patient Health Analytics Da
 
 The dashboard combines exploratory data analysis, missing data investigation, machine learning model comparison, model optimisation, and interpretable predictive modelling within a single application.
 
+**Live App:** [Patient Health Analytics Dashboard](https://bradley1228.shinyapps.io/data423_assignment_03/)
+
 ---
 
 ## Table of Contents
@@ -52,21 +54,37 @@ The **ObservationDate** specifies when the results were collected, spanning from
 
 ### Numeric Variable Distribution Summary
 
-| Variable | Min | Q1 | Median | Mean | Q3 | Max | SD | Missing % |
-|----------|-----|----|--------|------|----|-----|----|-----------|
-| Alcohol | 0 | 1.01 | 1.97 | 2.01 | 3.06 | 4 | 1.16 | 0% |
-| Coffee | 0 | 1.8 | 3.55 | 3.52 | 5.26 | 7 | 2 | 0% |
-| Exercise | 0 | 2.9 | 6.17 | 6.06 | 9.15 | 11.99 | 3.52 | 0% |
-| ChemoTreatments | 0 | 1.31 | 2.44 | 2.48 | 3.69 | 4.99 | 1.41 | 0% |
-| Response | -375.28 | 2,366.64 | 2,948.10 | 2,999.96 | 3,565.00 | 6,250.15 | 916.58 | 0% |
+Table 01: Numeric Variable Distribution and Missingness Summary 
+Variable Min Q1 Median Mean Q3 Max SD N Missing Missing % 
+Alcohol 0 1.01 1.97 2.01 3.06 4 1.16 969 0 0% 
+Coffee 0 1.8 3.55 3.52 5.26 7 2 969 0 0% 
+Exercise 0 2.9 6.17 6.06 9.15 11.99 3.52 969 0 0% 
+ChemoTreatments 0 1.31 2.44 2.48 3.69 4.99 1.41 969 0 0% 
+ReagentA 301.19 613.56 695.8 695.57 776.26 1,020.06 120.83 935 34 3.50% 
+ReagentB 230.42 442.14 501.19 499.74 554.7 725.65 83.35 926 43 4.40% 
+ReagentC 302.8 615.7 698.19 696.88 778.64 1,018.50 121 930 39 4% 
+ReagentD 283.28 534 601.21 600.02 667.53 962.98 100.76 926 43 4.40% 
+ReagentE 71.73 172.5 201.79 201.36 225.58 326.41 39.4 926 43 4.40% 
+ReagentF 288.91 534.39 602.21 600.2 667.14 966.64 100.71 927 42 4.30% 
+ReagentG 304.14 618.74 700.04 699.25 779.98 1,022.25 120.57 928 41 4.20% 
+ReagentH 287.63 535.88 603.07 600.95 668.84 963.11 100.71 936 33 3.40% 
+ReagentI 300.51 616.32 700.07 697.58 779.9 1,022.77 121.15 935 34 3.50% 
+ReagentJ 285.42 533.81 603.05 599.54 665.8 969.72 99.81 922 47 4.90% 
+ReagentK 230.96 439.82 501.12 499.13 553.46 728.64 83.75 918 51 5.30% 
+ReagentL 287.3 532.57 603.11 599.84 666.16 965.98 99.99 934 35 3.60% 
+ReagentM 79.96 171.97 198.97 200.49 225.08 322.47 39.59 927 42 4.30% 
+ReagentN 285.77 534.94 602.47 599.78 665.01 961.71 100.52 917 52 5.40% 
+Response -375.28 2,366.64 2,948.10 2,999.96 3,565.00 6,250.15 916.58 969 0 0% 
 
 *Table 01: Summary statistics for all numeric variables. Missing values are present only within the reagent variables.*
 
 ## 2). Boxplot Analysis
 
+![Boxplot Analysis](screenshots/boxplot.png)
+
 Boxplots were constructed for all numeric variables using the standard 1.5 IQR rule to identify potential outliers. No outliers were detected for the lifestyle variables. When the IQR multiplier was increased from 1.5 to **2.3**, all detected outliers disappeared across every variable.
 
-![Boxplot Analysis](screenshots/boxplot.png)
+
 
 *Visualisation 02: Centred and scaled boxplots of all numeric variables using an IQR multiplier of 2.3. The lifestyle variables display comparatively low variability, while the reagent variables and Response exhibit greater spread.*
 
