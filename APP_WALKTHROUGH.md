@@ -47,7 +47,7 @@ The **ObservationDate** specifies when the results were collected, spanning from
 
 *Visualisation 02: Dataset overview page summarising the structure and composition of the data.*
 
-**Key Information:**
+**Key Variable Information:**
 - 969 observations, 21 variables
 - Approximately 97.2% complete
 - Continuous response variable
