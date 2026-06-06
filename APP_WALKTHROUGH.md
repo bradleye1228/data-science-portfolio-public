@@ -41,11 +41,11 @@ The **Patient** column acts as a unique identifier for each individual in the st
 
 The **ObservationDate** specifies when the results were collected, spanning from **13th September 2013 to 21st September 2021** (8.0 years total).
 
-### Dataset Overview
+### Raw Overview
 
-![Dataset Overview](screenshots/dataset.png)
+![Raw Overview](screenshots/dataset.png)
 
-*Visualisation 02: Dataset overview page summarising the structure and composition of the data.*
+*Visualisation 02: Full view of the raw dataset for manual inspection.*
 
 **Key Variable Information:**
 - 969 observations, 21 variables
