@@ -187,10 +187,22 @@ Candidate methods were selected to ensure broad coverage across distinct regress
 
 *Visualisation 11: Model selection interface allowing users to investigate candidate models following training and compare their predictive performance, including RMSE, MAE, R², and resampling results.*
 
+![Resampling Statistics](screenshots/resampled_stat_1.png)
+
+*Visualisation 12: Resampling statistics presenting key performance statistics across bootstrap resamples (brnn model).*
+
+![Additional Resampling Statistics](screenshots/n_resampled_brnn_metrics.png)
+
+*Visualisation 13: Detected outliers from resampled performance summaries allowing comparison of model variability and consistency (brnn model).*
+
+![Resampling Visualisation](screenshots/n_brnn_outliers.png)
+
+*Visualisation 14: Candidate model performance across resampled trials. Boxplots of cross-validated MAE, RMSE, and R² for all candidate models, scaled relative to the null model baseline. The best performing candidate model was brnn with an RMSE of 133.*
+
 
 ![Model Comparison](screenshots/model_compare.png)
 
-*Visualisation 12: Model comparison results showing cross-validated performance metrics across all 27 regression methods. Bayesian Regularised Neural Networks (BRNN) consistently achieved the strongest predictive performance.*
+*Visualisation 15: Model comparison results showing cross-validated performance metrics across all 27 regression methods. Bayesian Regularised Neural Networks (BRNN) consistently achieved the strongest predictive performance.*
 
 
 **Table 02: Candidate Model Performance Summary**
@@ -225,18 +237,6 @@ Candidate methods were selected to ensure broad coverage across distinct regress
 | null | 923.14 | 32.9413 | N/A | N/A | 723.84 | 26.2989 | parameter=none | 1.1s |
 | mlpWeightDecayML | 1374.25 | 267.9432 | 0.049 | 0.0422 | 1101.54 | 215.2083 | layer1=7, layer2=0, layer3=0, decay=0.001 | 2m 2.8s |
 | avNNet | 3147.80 | 35.5587 | N/A | N/A | 3010.75 | 34.1256 | size=1, decay=0.01, bag=FALSE | 1m 56.4s |
-
-![Resampling Statistics](screenshots/resampled_stat_1.png)
-
-*Visualisation 13: Resampling statistics presenting key performance statistics across bootstrap resamples (brnn model).*
-
-![Additional Resampling Statistics](screenshots/n_resampled_brnn_metrics.png)
-
-*Visualisation 14: Detected outliers from resampled performance summaries allowing comparison of model variability and consistency (brnn model).*
-
-![Resampling Visualisation](screenshots/n_brnn_outliers.png)
-
-*Visualisation 15: Candidate model performance across resampled trials. Boxplots of cross-validated MAE, RMSE, and R² for all candidate models, scaled relative to the null model baseline. The best performing candidate model was brnn with an RMSE of 133.*
 
 #please change for four models
 
