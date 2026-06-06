@@ -217,6 +217,8 @@ Candidate methods were selected to ensure broad coverage across distinct regress
 
 *Visualisation 15: Candidate model performance across resampled trials. Boxplots of cross-validated MAE, RMSE, and R² for all candidate models, scaled relative to the null model baseline. The best performing candidate model was brnn with an RMSE of 133.*
 
+#please change for four models
+
 ## 3). Model Optimisation
 
 ![Optimised Models](screenshots/optimal%20models.png)
@@ -225,7 +227,7 @@ Candidate methods were selected to ensure broad coverage across distinct regress
 
 ![Performance versus Runtime](screenshots/optimal_model_time.png)
 
-*Visualisation 17: Runtime visualisation demonstrating the computational cost for each optimised model.*
+*Visualisation 17: CYomputational runtime for each optimised model.*
 
 ![BRNN Resampling Information](screenshots/brnn_resampled_info.png)
 
