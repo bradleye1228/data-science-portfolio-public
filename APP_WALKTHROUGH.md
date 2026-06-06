@@ -207,11 +207,11 @@ Candidate methods were selected to ensure broad coverage across distinct regress
 
 ![Resampling Statistics](screenshots/resampled_stat_1.png)
 
-*Visualisation 13: Resampling statistics presenting key performance statistics across bootstrap resamples.*
+*Visualisation 13: Resampling statistics presenting key performance statistics across bootstrap resamples (brnn model).*
 
 ![Additional Resampling Statistics](screenshots/resampled_stat_2.png)
 
-*Visualisation 14: Detected outliers from resampled performance summaries allowing comparison of model variability and consistency.*
+*Visualisation 14: Detected outliers from resampled performance summaries allowing comparison of model variability and consistency (brnn model).*
 
 ![Resampling Visualisation](screenshots/resampled_vis.png)
 
