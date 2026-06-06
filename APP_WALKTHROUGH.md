@@ -111,7 +111,7 @@ The reagent variables display several very strong positive correlations with one
 
 ![GGPairs Analysis](screenshots/ggpairs.png)
 
-*Visualisation 06: GGPairs visualisation providing pairwise scatterplots, correlation coefficients, and variable distributions for detailed relationship exploration. This allows users to investigate patterns identified during correlation analysis.*
+*Visualisation 06: GGPairs visualisation providing pairwise scatterplots, correlation coefficients, and variable distributions for detailed relationship exploration. This allows users to investigate patterns identified during correlation analysis. Singular plots are also available if required in the app.*
 
 ## 5). Missingness Heatmap and Tree
 
