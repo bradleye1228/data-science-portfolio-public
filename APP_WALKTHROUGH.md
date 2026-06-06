@@ -255,19 +255,23 @@ Candidate methods were selected to ensure broad coverage across distinct regress
 
 **Table 03: Optimised Model Results**
 
-| Model | RMSE | R² | Train Time |
-|-------|------|-----|-------------|
-| **brnn_optim** | **110.50** | **0.986** | 8m 47s |
-| svmPoly_optim | 152.39 | 0.973 | 81m 29s |
-| gaussprPoly_optim | 154.84 | 0.973 | 14m 53s |
-| svmRadial_optim | 166.43 | 0.968 | 28m 35s |
+| Model             | CV RMSE    | CV R²     | Train Time | Train RMSE | Test RMSE | RMSE Change | Test R²    |
+| ----------------- | ---------- | --------- | ---------- | ---------- | --------- | ----------- | ---------- |
+| **brnn_optim**    | **110.50** | **0.986** | 8m 47s     | **73.79**  | **79.72** | **+8.03%**  | **0.9916** |
+| svmPoly_optim     | 152.39     | 0.973     | 81m 29s    | 74.03      | 116.37    | +57.18%     | 0.9822     |
+| gaussprPoly_optim | 154.84     | 0.973     | 14m 53s    | 62.46      | 106.84    | +71.05%     | 0.9850     |
+| svmRadial_optim   | 166.43     | 0.968     | 28m 35s    | 84.60      | 127.42    | +50.62%     | 0.9786     |
+
+*brnn_optim demonstrated the strongest and most stable generalisation performance, with the smallest gap between training and testing error.*
+
+
 
 ---
 
 # Part D: Best Model
 
+## 1). Optimised Models' Performance on Unseen Data
 
-# New
 
 ![BRNN All Metrics](screenshots/n_brnn_all_metrics.png)
 
@@ -282,43 +286,15 @@ Candidate methods were selected to ensure broad coverage across distinct regress
 
 
 
+![BRNN Training Results](screenshots/n_brnn_train_metric.png)
+
+*Visualisation 20: BRNN training results showing predicted versus actual values. Training predictions closely align with observed values, demonstrating the model's ability to capture complex nonlinear relationships.*
+
+![BRNN Testing Results](screenshots/n_brnn_test_metrics.png)
+
+*Visualisation 21: BRNN testing results showing predicted versus actual values. Testing RMSE: 79.7, Testing R²: 0.9916. The small gap between training and testing performance indicates excellent generalisation and minimal overfitting.*
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Stop
-
-## 1). Optimised Models' Performance on Unseen Data
-
-![BRNN Training Results](screenshots/brnn%20train.png)
-
-*Visualisation 18: BRNN training results showing predicted versus actual values. Training predictions closely align with observed values, demonstrating the model's ability to capture complex nonlinear relationships.*
-
-![BRNN Testing Results](screenshots/brnn%20test.png)
-
-*Visualisation 19: BRNN testing results showing predicted versus actual values. Testing RMSE: 79.7, Testing R²: 0.9916. The small gap between training and testing performance indicates excellent generalisation and minimal overfitting.*
-
-**Table 04: Optimised Model Performance Comparison**
-
-| Model | Training RMSE | Testing RMSE | RMSE Change | Testing R² |
-|-------|---------------|--------------|-------------|-------------|
-| **brnn_optim** | **73.79** | **79.72** | **+8.03%** | **0.9916** |
-| gaussprPoly_optim | 62.46 | 106.84 | +71.05% | 0.9850 |
-| svmPoly_optim | 74.03 | 116.37 | +57.18% | 0.9822 |
-| svmRadial_optim | 84.60 | 127.42 | +50.62% | 0.9786 |
-
-*brnn_optim demonstrated the strongest and most stable generalisation performance, with the smallest gap between training and testing error.*
 
 ## 2) Best Model Theory Explanation
 
@@ -347,27 +323,27 @@ The relatively small difference between the training RMSE (73.8) and testing RMS
 
 ![New_transparent_01](screenshots/New_transparent_01.png)
 
-*Visualisation 20: glmnet model overview showing the transparent model structure using elastic net regularisation, automatic feature selection, pairwise interaction terms, and coefficient shrinkage.*
+*Visualisation 22: glmnet model overview showing the transparent model structure using elastic net regularisation, automatic feature selection, pairwise interaction terms, and coefficient shrinkage.*
 
 
 ![new_transparent_02_top_25](screenshots/new_transparent_02_top_25.png)
 
-*Visualisation 21:* Top 25 coefficents out of 154 for the glmnet_interact model.
+*Visualisation 23:* Top 25 coefficents out of 154 for the glmnet_interact model.
 
 ![new_transparent_03_recipe_info](screenshots/new_transparent_03_recipe_info.png)
 
-*Visualisation 22:* 
+*Visualisation 24:* 
 
 
 
 
 ![glmnet Training Results](screenshots/glment%20int%20train.png)
 
-*Visualisation 23: glmnet training results demonstrating the model's ability to explain variation within the dataset while retaining transparency.*
+*Visualisation 25: glmnet training results demonstrating the model's ability to explain variation within the dataset while retaining transparency.*
 
 ![glmnet Testing Results](screenshots/glmnetinter%20test.png)
 
-*Visualisation 24: glmnet testing results showing strong predictive performance. Testing RMSE: 133.4, Testing R²: 0.977.*
+*Visualisation 25: glmnet testing results showing strong predictive performance. Testing RMSE: 133.4, Testing R²: 0.977.*
 
 **Table 05: Transparent Model Comparison**
 
