@@ -1,190 +1,76 @@
-# NZ Crash Data Dashboard - Application Walkthrough
+# NZ Crash Data Dashboard — Application Walkthrough
 
-This document provides a visual walkthrough of the **NZ Crash Data Dashboard**, an interactive web application developed for ** Introduction to python: COSC480 Assignment 3** at the **University of Canterbury**.
+**Author:** Eduard Bradley, 13241805
 
-The application uses crash data sourced from the New Zealand Transport Agency (Waka Kotahi) Crash Analysis System (CAS) and allows users to explore road safety trends across New Zealand through interactive filtering, mapping, and visualisation tools.
+This document provides a visual walkthrough of the **NZ Crash Data Dashboard**, an interactive web application developed for **COSC 480: Introduction to Python, Assignment 3** at the **University of Canterbury**.
 
----
+The application uses crash data sourced from the New Zealand Transport Agency (Waka Kotahi) Crash Analysis System (CAS), allowing users to explore road safety trends across New Zealand through interactive filtering, mapping, and visualisation tools.
 
-## Live Application
-
-https://nz-crash-clean-bradley.streamlit.app/
-
----
-
-# Dashboard Overview
-
-The dashboard was developed using **Python**, **Streamlit**, **Pandas**, **GeoPandas**, and **Matplotlib** to provide an accessible platform for exploring New Zealand road crash data.
-
-Users can interactively filter crash records by:
-
-* Year range
-* Crash severity
-* Road speed limits
-* Region
-
-Visualisations update automatically based on user selections, allowing rapid exploration of crash patterns and trends.
+**Live App:** [NZ Crash Data Dashboard](https://nz-crash-clean-bradley.streamlit.app/)
 
 ---
 
 # Main Dashboard Interface
 
-The default dashboard view displays the complete crash dataset with no filters applied.
+The default dashboard view displays the complete crash dataset with no filters applied. All visualisations update automatically in response to user selections, allowing rapid exploration of crash patterns and trends.
 
 ![Main Dashboard](images/main_dashboard.png)
 
-### Features Displayed
+*Visualisation 01: Default dashboard view showing the full crash dataset with interactive filter controls, crash summary statistics, regional crash totals, and time-series visualisations. No filters are applied.*
 
-* Interactive filter controls
-* Crash summary statistics
-* Regional crash totals
-* Time-series visualisations
-* Download options for charts and filtered datasets
-* Expandable visualisation panels
-
-### Purpose
-
-This view provides users with an immediate overview of crash patterns across New Zealand and serves as the starting point for more detailed analysis.
-
-### Key Functionality
-
-Users can:
-
-* Explore crash trends across all years
-* Compare crash counts between regions
-* Export filtered data as CSV files
-* Download generated visualisations as PNG images
+Users can filter crash records by year range, crash severity, road speed limits, and region. Filtered datasets and generated charts can be exported as CSV and PNG files respectively.
 
 ---
 
 # Expanded Visualisation View
 
-The dashboard includes several expandable analysis sections designed to reduce clutter while still providing detailed analytical capabilities.
+The dashboard includes expandable analysis sections to reduce clutter while retaining full analytical capability.
 
 ![Expanded Visualisations](images/expanded_visualisations.png)
 
-### Available Visualisations
+*Visualisation 02: Expanded panel view showing the regional crash comparison bar chart, interactive time-series line graph, and data exploration table. Visualisations reflect the currently applied filter selections.*
 
-#### Regional Crash Comparison
+### Regional Crash Comparison
 
-The regional bar chart allows users to compare total crash counts between regions.
+The regional bar chart compares total crash counts between regions, helping identify areas with consistently higher crash frequencies across different filtering scenarios.
 
-This visualisation helps identify regions with consistently higher crash frequencies and supports comparisons under different filtering scenarios.
+### Time-Series Analysis
 
-#### Time-Series Analysis
+The interactive line graph displays crash trends over time, supporting comparison of multiple regions simultaneously and investigation of long-term road safety patterns.
 
-The interactive line graph displays crash trends over time.
+### Data Exploration Table
 
-Users can:
-
-* Select specific regions
-* Compare multiple regions simultaneously
-* Explore changes in crash frequency over time
-* Investigate long-term road safety trends
-
-#### Data Exploration Table
-
-The interactive data table allows direct inspection of the filtered crash records.
-
-Features include:
-
-* Sorting
-* Searching
-* Filtering
-* Exporting results
-
-This provides transparency and allows users to examine the observations underlying each visualisation.
+The interactive data table provides direct access to the filtered crash records with sorting, searching, filtering, and export functionality, allowing users to inspect the observations underlying each visualisation.
 
 ---
 
 # Example Analysis Using Filters
 
-The dashboard supports scenario-based exploration through interactive filtering.
+The example below demonstrates scenario-based filtering using the following criteria:
 
-The example below applies the following criteria:
-
-* Years: 2020–2024
-* Speed limits: 100–110 km/h
-* Crash severity: Fatal
-
-For the visualisations, the following regions were selected:
-
-* Northland
-* Waikato
-* Manawatū-Whanganui
+- **Years:** 2020–2024
+- **Speed limits:** 100–110 km/h
+- **Crash severity:** Fatal
+- **Regions:** Northland, Waikato, Manawatū-Whanganui
 
 ![Filtered Analysis Example](images/filtered_analysis.png)
 
-### Purpose
+*Visualisation 03: Filtered dashboard view showing fatal crash records on high-speed roads between 2020 and 2024 for three selected regions. The regional comparison and time-series panels update automatically to reflect the applied filters.*
 
-This example demonstrates how users can investigate a highly specific road safety scenario.
-
-Rather than viewing all crash records, users can focus on:
-
-* High-speed roads
-* Fatal crashes
-* Recent years
-* Specific regions of interest
-
-### Insights Supported
-
-Using this filtered view, users can:
-
-* Identify which selected regions experienced the highest number of fatal crashes
-* Compare trends between regions over time
-* Examine the underlying crash records through the data table
-* Export both the visualisations and filtered dataset for reporting purposes
-
-This type of targeted analysis allows users to investigate specific road safety concerns and identify areas where intervention or further study may be warranted.
-
----
-
-# Technical Features
-
-The application incorporates several features designed to improve performance and usability.
-
-### Interactive Filtering
-
-All visualisations update automatically in response to user selections, eliminating the need to rerun scripts or regenerate reports manually.
-
-### Geospatial Analysis
-
-Regional crash counts are merged with New Zealand regional boundary data to support choropleth mapping and geographic analysis.
-
-### Data Export
-
-Users can export:
-
-* Filtered datasets as CSV files
-* Generated visualisations as PNG images
-
-### Performance Optimisation
-
-Streamlit caching functions are used to improve responsiveness and reduce repeated data processing.
+This targeted view allows users to compare fatal crash frequencies between regions, examine year-on-year trends under specific conditions, and export both the filtered dataset and visualisations for reporting purposes.
 
 ---
 
 # Technologies Used
 
-* Python
-* Streamlit
-* Pandas
-* GeoPandas
-* Matplotlib
+- Python
+- Streamlit
+- Pandas
+- GeoPandas
+- Matplotlib
 
 ---
 
-# Project Summary
+## Project Context
 
-The NZ Crash Data Dashboard transforms static crash reports into an interactive analytical environment.
-
-The application enables users to:
-
-* Explore crash patterns across New Zealand
-* Compare regions
-* Analyse trends over time
-* Investigate crash severity and speed-related factors
-* Perform targeted road safety analysis
-* Export both visualisations and data for further reporting
-
-The project demonstrates the integration of data analytics, geospatial visualisation, interactive dashboard design, and web application development within a real-world road safety context.
+This application was developed for **COSC 480 – Introduction to Python** at the **University of Canterbury**. The dataset is sourced from the New Zealand Transport Agency (Waka Kotahi) Crash Analysis System (CAS) and covers road crash records from across New Zealand.
