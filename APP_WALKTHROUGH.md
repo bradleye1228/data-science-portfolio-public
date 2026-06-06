@@ -230,11 +230,11 @@ Candidate methods were selected to ensure broad coverage across distinct regress
 
 *Visualisation 13: Resampling statistics presenting key performance statistics across bootstrap resamples (brnn model).*
 
-![Additional Resampling Statistics](screenshots/resampled_stat_2.png)
+![Additional Resampling Statistics](screenshots/n_resampled_brnn_metrics.png)
 
 *Visualisation 14: Detected outliers from resampled performance summaries allowing comparison of model variability and consistency (brnn model).*
 
-![Resampling Visualisation](screenshots/resampled_vis.png)
+![Resampling Visualisation](screenshots/n_brnn_outliers.png)
 
 *Visualisation 15: Candidate model performance across resampled trials. Boxplots of cross-validated MAE, RMSE, and R² for all candidate models, scaled relative to the null model baseline. The best performing candidate model was brnn with an RMSE of 133.*
 
