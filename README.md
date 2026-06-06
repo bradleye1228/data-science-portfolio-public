@@ -2,8 +2,6 @@
 
 An interactive R Shiny application developed as part of DATA 423 at the University of Canterbury. The application performs exploratory data analysis (EDA) on a structured manufacturing dataset (`Ass1Data.csv`) containing weekly sensor readings, operational conditions, and categorical descriptors recorded between January 2018 and November 2024.
 
-Please use the following link to access it:
-
 **Live App:** [Manufacturing Dashboard](https://bradley1228.shinyapps.io/assignment_01_v3/)
 
 ---
