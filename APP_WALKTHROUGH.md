@@ -241,11 +241,11 @@ Candidate methods were selected to ensure broad coverage across distinct regress
 
 ## 3). Model Optimisation
 
-![Optimised Models](screenshots/optimal%20models.png)
+![Optimised Models](screenshots/n_optimal_model_metrics.png)
 
 *Visualisation 15: Optimised models comparison showing the performance of the four best candidate models after expanded hyperparameter optimisation and bagged imputation. Training time is also provided.*
 
-![Performance versus Runtime](screenshots/optimal_model_time.png)
+![Performance versus Runtime](screenshots/n_Optimal_model_train_time.png)
 
 *Visualisation 16: Computational runtime for each optimised model.*
 
