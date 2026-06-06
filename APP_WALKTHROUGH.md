@@ -27,7 +27,7 @@ The dashboard combines exploratory data analysis, recipe preprocessing, machine 
 
 ## 1). Introduce Data
 
-![Introduction](screenshots/intro.png)
+![Introduction](screenshots/eda/dashboard_overview.png)
 
 *Visualisation 01: Dashboard introduction page showing the dataset overview statistics.*
 
@@ -43,7 +43,7 @@ The **ObservationDate** specifies when the results were collected, spanning from
 
 ### Raw Overview
 
-![Raw Overview](screenshots/dataset.png)
+![Raw Overview](screenshots/eda/raw_dataset_preview.png)
 
 *Visualisation 02: Full view of the raw dataset displayed for manual inspection.*
 
@@ -57,7 +57,7 @@ The **ObservationDate** specifies when the results were collected, spanning from
 
 ### Observation Timeline
 
-![Observation Timeline](screenshots/proper_timeline.png)
+![Observation Timeline](screenshots/eda/observation_timeline_distribution.png)
 
 *Visualisation 03: Bar graph showing the monthly distribution of recorded observations between 13th September 2013 and 21st September 2021. The distribution of entries is relatively consistent across the 8-year period, with an average of approximately 10 observations recorded per month.*
 
@@ -91,7 +91,7 @@ The **ObservationDate** specifies when the results were collected, spanning from
 
 ## 2). Boxplot Analysis
 
-![Boxplot Analysis](screenshots/boxplot.png)
+![Boxplot Analysis](screenshots/eda/scaled_numeric_boxplots.png)
 
 *Visualisation 04: Centred and scaled boxplots of all numeric variables using an IQR multiplier of 1.5. The lifestyle variables display comparatively low variability and narrower distributions, while the reagent variables and Response exhibit greater spread. All detected outliers disappear when the IQR multiplier is increased to 2.3.*
 
@@ -99,7 +99,7 @@ Boxplots were constructed for all numeric variables using the standard 1.5 IQR r
 
 ## 3). Correlation Analysis
 
-![Correlation Matrix](screenshots/correlation.png)
+![Correlation Matrix](screenshots/eda/correlation_heatmap.png)
 
 *Visualisation 05: Pearson correlation heatmap for all numeric variables, excluding observations containing missing reagent entries. The heatmap shows generally weak correlations between most variables, with Exercise displaying the strongest relationship with Response (r = −0.57). Several reagent variable pairs exhibit extremely strong positive correlations, indicating substantial multicollinearity.*
 
@@ -109,13 +109,13 @@ The reagent variables display several very strong positive correlations with one
 
 ## 4). Pairwise Variable Relationships
 
-![GGPairs Analysis](screenshots/ggpairs.png)
+![GGPairs Analysis](screenshots/eda/ggpairs.png)
 
 *Visualisation 06: GGPairs visualisation providing pairwise scatterplots, correlation coefficients, and variable distributions for detailed relationship exploration. This view allows users to investigate patterns identified during the correlation analysis. Individual pairwise plots are also available within the application.*
 
 ## 5). Missingness Heatmap and Tree
 
-![Missingness Plot](screenshots/missingplot.png)
+![Missingness Plot](screenshots/eda/missingness_heatmap.png)
 
 *Visualisation 07: Missingness heatmap showing the distribution of missing values across the reagent variables. Missing values are limited to the reagent measurements, ranging from 3.4% (ReagentH) to 5.4% (ReagentN) of observations. While the heatmap suggests dispersion throughout the dataset, further analysis reveals that missingness is systematically concentrated within a specific subset of patients.*
 
@@ -158,7 +158,7 @@ The chosen recipe applied to all candidate methods followed:
 
 ## 5). Tuning and Assessing
 
-![Train Test Split](screenshots/train_test_split.png)
+![Train Test Split](screenshots/preprocessing/train_test_split_overview.png)
 
 *Visualisation 08: Train-test partition visualisation. A static test set consisting of 20% of observations was reserved for final model assessment. The dataset was partitioned into training and testing subsets before any modelling was performed to prevent data leakage and support independent model evaluation.*
 
@@ -170,7 +170,7 @@ A static test set consisting of **20% of observations** was reserved for final m
 
 ## 1). Candidate Methods
 
-![Regression Methods](screenshots/caret_regression_methods.png)
+![Regression Methods](screenshots/candidate_models/caret_regression_method_catalogue.png)
 
 *Visualisation 09: Comprehensive overview of all regression models available in the caret framework. For each method, the table presents the underlying package, model classification tags, and tunable hyperparameters, facilitating comparison of available regression approaches.*
 
@@ -178,23 +178,23 @@ Candidate methods were selected to ensure broad coverage across distinct regress
 
 ## 2). Candidate Models
 
-![Null Model](screenshots/null_model.png)
+![Null Model](screenshots/candidate_models/null_model_baseline_performance.png)
 
 *Visualisation 10: Null model baseline providing a performance benchmark. All candidate models were compared against this baseline to quantify predictive improvement.*
 
-![Model Selection](screenshots/select_model.png)
+![Model Selection](screenshots/candidate_models/candidate_model_selection.png)
 
 *Visualisation 11: Model selection interface allowing users to investigate candidate models following training and compare their predictive performance, including RMSE, MAE, R², and resampling results.*
 
-![Additional Resampling Statistics](screenshots/n_resampled_brnn_metrics.png)
+![Additional Resampling Statistics](screenshots/candidate_models/brnn_resampling_summary.png)
 
 *Visualisation 12: Key performance statistics across bootstrap resamples for the BRNN model.*
 
-![Resampling Visualisation](screenshots/n_brnn_outliers.png)
+![Resampling Visualisation](screenshots/candidate_models/brnn_resampling_outlier_analysis.png)
 
 *Visualisation 13: Detected outliers from resampled performance summaries, allowing comparison of model variability and consistency for the BRNN model.*
 
-![Model Comparison](screenshots/n_canadate_models.png)
+![Model Comparison](screenshots/candidate_models/candidate_model_performance_comparison.png)
 
 *Visualisation 14: Model comparison results showing cross-validated performance metrics across all 27 regression methods. Bayesian Regularised Neural Networks (BRNN) consistently achieved the strongest predictive performance, with a resampled RMSE of 133.*
 
@@ -233,15 +233,15 @@ Candidate methods were selected to ensure broad coverage across distinct regress
 
 ## 3). Model Optimisation
 
-![Optimised Models](screenshots/n_optimal_model_metrics.png)
+![Optimised Models](screenshots/model_optimisation/optimised_model_performance_comparison.png)
 
 *Visualisation 15: Comparison of the four best candidate models following expanded hyperparameter optimisation with bagged imputation. Training time is also provided for each model.*
 
-![Performance versus Runtime](screenshots/n_Optimal_model_train_time.png)
+![Performance versus Runtime](screenshots/model_optimisation/optimised_model_training_time_comparison.png)
 
 *Visualisation 16: Computational runtime for each of the four optimised models.*
 
-![BRNN Resampling Information](screenshots/brnn_resampled_info.png)
+![BRNN Resampling Information](screenshots/model_optimisation/brnn_optim_resampling_diagnostics.png)
 
 *Visualisation 17: Detailed resampling diagnostics for the highest-performing BRNN model, demonstrating strong and consistent predictive capability across bootstrap resamples.*
 
@@ -270,11 +270,11 @@ Candidate methods were selected to ensure broad coverage across distinct regress
 
 *Visualisation 19: Combined training and test view of predicted versus actual observations from the brnn_optim model, with individual patient highlighting.*
 
-![BRNN Training Results](screenshots/n_brnn_train_metric.png)
+![BRNN Training Results](screenshots/best_model/brnn_training_predictions.png)
 
 *Visualisation 20: BRNN training results showing predicted versus actual values. Training predictions closely align with observed values, demonstrating the model's ability to capture complex nonlinear relationships.*
 
-![BRNN Testing Results](screenshots/n_brnn_test_metrics.png)
+![BRNN Testing Results](screenshots/best_model/brnn_testing_predictions.png)
 
 *Visualisation 21: BRNN testing results showing predicted versus actual values. Testing RMSE: 79.7, Testing R²: 0.9916. The small gap between training and testing performance indicates excellent generalisation and minimal overfitting.*
 
@@ -303,23 +303,23 @@ The relatively small difference between the training RMSE (73.8) and testing RMS
 
 ## 1). Transparent Model Development
 
-![New Transparent Model Overview](screenshots/New_transparent_01.png)
+![New Transparent Model Overview](screenshots/transparent_model/glmnet_hyperparameter_performance.png)
 
 *Visualisation 22: Performance of the glmnet_interact model across different hyperparameter combinations, illustrating the impact of alpha and lambda tuning on predictive accuracy (RMSE).*
 
-![Top 25 Coefficients](screenshots/new_transparent_02_top_25.png)
+![Top 25 Coefficients](screenshots/transparent_model/glmnet_top_25_coefficients.png)
 
 *Visualisation 23: The top 25 coefficients out of 154 retained by the glmnet_interact model, ranked by absolute magnitude.*
 
-![Recipe and Tuning Information](screenshots/new_transparent_03_recipe_info.png)
+![Recipe and Tuning Information](screenshots/transparent_model/glmnet_optimal_tuning_summary.png)
 
 *Visualisation 24: Optimal hyperparameter selection for the glmnet_interact model, with the best alpha fixed at 1 (Lasso) and the regularisation parameter lambda at 0.726, resulting in a final model with 154 non-zero coefficients.*
 
-![glmnet Training Results](screenshots/glment%20int%20train.png)
+![glmnet Training Results](screenshots/transparent_model/glmnet_interaction_training_predictions.png)
 
 *Visualisation 25: glmnet_interact training results demonstrating the model's ability to explain variation within the dataset while retaining full transparency.*
 
-![glmnet Testing Results](screenshots/glmnetinter%20test.png)
+![glmnet Testing Results](screenshots/transparent_model/glmnet_interaction_testing_predictions.png)
 
 *Visualisation 26: glmnet_interact testing results showing strong predictive performance on unseen data. Testing RMSE: 133.4, Testing R²: 0.977.*
 
