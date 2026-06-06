@@ -262,11 +262,11 @@ Candidate methods were selected to ensure broad coverage across distinct regress
 
 ## 1). Optimised Models' Performance on Unseen Data
 
-![BRNN All Metrics](screenshots/n_brnn_all_metrics.png)
+![BRNN All Metrics](screenshots/best_model/brnn_train_test_metric_summary.png)
 
 *Visualisation 18: Combined view of training, resampled training, and test metrics for the brnn_optim model.*
 
-![BRNN Predicted vs Actual](screenshots/n_predicted_vs_actual_highlight_a_patient.png)
+![BRNN Predicted vs Actual](screenshots/best_model/brnn_predicted_vs_actual_patient_highlight.png)
 
 *Visualisation 19: Combined training and test view of predicted versus actual observations from the brnn_optim model, with individual patient highlighting.*
 
