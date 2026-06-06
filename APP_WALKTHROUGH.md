@@ -187,22 +187,21 @@ Candidate methods were selected to ensure broad coverage across distinct regress
 
 *Visualisation 11: Model selection interface allowing users to investigate candidate models following training and compare their predictive performance, including RMSE, MAE, R², and resampling results.*
 
-![Resampling Statistics](screenshots/resampled_stat_1.png)
-
-*Visualisation 12: Resampling statistics presenting key performance statistics across bootstrap resamples (brnn model).*
 
 ![Additional Resampling Statistics](screenshots/n_resampled_brnn_metrics.png)
 
-*Visualisation 13: Detected outliers from resampled performance summaries allowing comparison of model variability and consistency (brnn model).*
+*Visualisation 12: Resampling statistics presenting key performance statistics across bootstrap resamples (brnn model).*
+
 
 ![Resampling Visualisation](screenshots/n_brnn_outliers.png)
 
-*Visualisation 14: Candidate model performance across resampled trials. Boxplots of cross-validated MAE, RMSE, and R² for all candidate models, scaled relative to the null model baseline. The best performing candidate model was brnn with an RMSE of 133.*
+*Visualisation 13: Detected outliers from resampled performance summaries allowing comparison of model variability and consistency (brnn model).*
+
 
 
 ![Model Comparison](screenshots/model_compare.png)
 
-*Visualisation 15: Model comparison results showing cross-validated performance metrics across all 27 regression methods. Bayesian Regularised Neural Networks (BRNN) consistently achieved the strongest predictive performance.*
+*Visualisation 14: Model comparison results showing cross-validated performance metrics across all 27 regression methods. Bayesian Regularised Neural Networks (BRNN) consistently achieved the strongest predictive performance. The best performing candidate model was brnn with an RMSE of 133.*
 
 
 **Table 02: Candidate Model Performance Summary**
@@ -244,15 +243,15 @@ Candidate methods were selected to ensure broad coverage across distinct regress
 
 ![Optimised Models](screenshots/optimal%20models.png)
 
-*Visualisation 16: Optimised models comparison showing the performance of the four best candidate models after expanded hyperparameter optimisation and bagged imputation. Training time is also provided.*
+*Visualisation 15: Optimised models comparison showing the performance of the four best candidate models after expanded hyperparameter optimisation and bagged imputation. Training time is also provided.*
 
 ![Performance versus Runtime](screenshots/optimal_model_time.png)
 
-*Visualisation 17: Computational runtime for each optimised model.*
+*Visualisation 16: Computational runtime for each optimised model.*
 
 ![BRNN Resampling Information](screenshots/brnn_resampled_info.png)
 
-*Visualisation 18: Detailed resampling diagnostics for the highest-performing BRNN model, demonstrating strong and consistent predictive capability.*
+*Visualisation 17: Detailed resampling diagnostics for the highest-performing BRNN model, demonstrating strong and consistent predictive capability.*
 
 **Table 03: Optimised Model Results**
 
@@ -271,11 +270,11 @@ Candidate methods were selected to ensure broad coverage across distinct regress
 
 ![BRNN Training Results](screenshots/brnn%20train.png)
 
-*Visualisation 19: BRNN training results showing predicted versus actual values. Training predictions closely align with observed values, demonstrating the model's ability to capture complex nonlinear relationships.*
+*Visualisation 18: BRNN training results showing predicted versus actual values. Training predictions closely align with observed values, demonstrating the model's ability to capture complex nonlinear relationships.*
 
 ![BRNN Testing Results](screenshots/brnn%20test.png)
 
-*Visualisation 20: BRNN testing results showing predicted versus actual values. Testing RMSE: 79.7, Testing R²: 0.9916. The small gap between training and testing performance indicates excellent generalisation and minimal overfitting.*
+*Visualisation 19: BRNN testing results showing predicted versus actual values. Testing RMSE: 79.7, Testing R²: 0.9916. The small gap between training and testing performance indicates excellent generalisation and minimal overfitting.*
 
 **Table 04: Optimised Model Performance Comparison**
 
@@ -315,27 +314,27 @@ The relatively small difference between the training RMSE (73.8) and testing RMS
 
 ![New_transparent_01](screenshots/New_transparent_01.png)
 
-*Visualisation 21: glmnet model overview showing the transparent model structure using elastic net regularisation, automatic feature selection, pairwise interaction terms, and coefficient shrinkage.*
+*Visualisation 20: glmnet model overview showing the transparent model structure using elastic net regularisation, automatic feature selection, pairwise interaction terms, and coefficient shrinkage.*
 
 
 ![new_transparent_02_top_25](screenshots/new_transparent_02_top_25.png)
 
-*Visualisation 22:* Top 25 coefficents out of 154 for the glmnet_interact model.
+*Visualisation 21:* Top 25 coefficents out of 154 for the glmnet_interact model.
 
 ![new_transparent_03_recipe_info](screenshots/new_transparent_03_recipe_info.png)
 
-*Visualisation 23:* 
+*Visualisation 22:* 
 
 
 
 
 ![glmnet Training Results](screenshots/glment%20int%20train.png)
 
-*Visualisation 24: glmnet training results demonstrating the model's ability to explain variation within the dataset while retaining transparency.*
+*Visualisation 23: glmnet training results demonstrating the model's ability to explain variation within the dataset while retaining transparency.*
 
 ![glmnet Testing Results](screenshots/glmnetinter%20test.png)
 
-*Visualisation 25: glmnet testing results showing strong predictive performance. Testing RMSE: 133.4, Testing R²: 0.977.*
+*Visualisation 24: glmnet testing results showing strong predictive performance. Testing RMSE: 133.4, Testing R²: 0.977.*
 
 **Table 05: Transparent Model Comparison**
 
