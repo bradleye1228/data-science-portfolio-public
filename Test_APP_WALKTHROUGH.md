@@ -194,7 +194,7 @@ Candidate methods were selected to ensure broad coverage across distinct regress
 
 *Visualisation 13: Detected outliers from resampled performance summaries, allowing comparison of model variability and consistency for the BRNN model.*
 
-![Model Comparison](screenshots/model_compare.png)
+![Model Comparison](screenshots/n_canadate_models.png)
 
 *Visualisation 14: Model comparison results showing cross-validated performance metrics across all 27 regression methods. Bayesian Regularised Neural Networks (BRNN) consistently achieved the strongest predictive performance, with a resampled RMSE of 133.*
 
