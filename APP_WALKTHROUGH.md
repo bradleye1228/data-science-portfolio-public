@@ -4,9 +4,9 @@
 
 This document provides a visual walkthrough of the **Patient Health Analytics Dashboard**, an interactive R Shiny application developed for **DATA 423: Data Science in Industry** at the **University of Canterbury**.
 
-The dashboard combines exploratory data analysis, missing data investigation, machine learning model comparison, model optimisation, and interpretable predictive modelling within a single application.
+The dashboard combines exploratory data analysis, recipe preprocessing, machine learning model comparison, model optimisation, and interpretable predictive modelling within a single application.
 
-**Live App:** [Patient Health Analytics Dashboard](https://bradley1228.shinyapps.io/data423_assignment_03/)
+**Live App:** [Patient Health Analytics Dashboard](https://bradley1 228.shinyapps.io/data423_assignment_03/)
 
 ---
 
