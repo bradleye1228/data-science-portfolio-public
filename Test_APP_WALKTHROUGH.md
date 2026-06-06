@@ -305,7 +305,7 @@ The relatively small difference between the training RMSE (73.8) and testing RMS
 
 ![New Transparent Model Overview](screenshots/New_transparent_01.png)
 
-*Visualisation 22: glmnet model overview showing the transparent model structure using elastic net regularisation, automatic feature selection, pairwise interaction terms, and coefficient shrinkage.*
+*Visualisation 22: Performance of the glmnet_interact model across different hyperparameter combinations, illustrating the impact of alpha and lambda tuning on predictive accuracy (RMSE).*
 
 ![Top 25 Coefficients](screenshots/new_transparent_02_top_25.png)
 
