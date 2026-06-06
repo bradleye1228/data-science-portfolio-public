@@ -266,6 +266,39 @@ Candidate methods were selected to ensure broad coverage across distinct regress
 
 # Part D: Best Model
 
+
+# New
+
+![BRNN All Metrics](screenshots/n_brnn_all_metrics.png)
+
+*Visualisation 18: Combined view of train, resampled train, and test metrics for the brnn_optim model*
+
+
+![BRNN predicted vs Actual](screenshots/n_predicted_vs_actual_highlight_a_patient.png)
+
+*Visualisation 19: Train and Test combined view of predicted and actual observations from the brnn_optim model*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Stop
+
 ## 1). Optimised Models' Performance on Unseen Data
 
 ![BRNN Training Results](screenshots/brnn%20train.png)
