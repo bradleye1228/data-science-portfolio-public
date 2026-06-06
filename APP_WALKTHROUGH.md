@@ -87,13 +87,13 @@ The **ObservationDate** specifies when the results were collected, spanning from
 | ReagentN | 285.77 | 534.94 | 602.47 | 599.78 | 665.01 | 961.71 | 100.52 | 917 | 52 | 5.40% |
 | Response | -375.28 | 2,366.64 | 2,948.10 | 2,999.96 | 3,565.00 | 6,250.15 | 916.58 | 969 | 0 | 0% |
 
-*Table 01 summarises the distribution and missingness for all numeric variables. Missing values are present only within the reagent variables, whereas Alcohol, Coffee, Exercise, ChemoTreatments, and Response contain complete observations.*
+*Table 01 summarises the distribution and missingness for all numeric variables. Missing values are present only within the reagent variables, whereas all lifestyle variables (Alcohol, Coffee, Exercise, and ChemoTreatments) and Response contain complete entries.*
 
 ## 2). Boxplot Analysis
 
 ![Boxplot Analysis](screenshots/boxplot.png)
 
-*Visualisation 04: Centred and scaled boxplots of all numeric variables using an IQR multiplier of 1.5. The lifestyle variables (Alcohol, Coffee, Exercise, and ChemoTreatments) display comparatively low variability and narrower distributions, while the reagent variables and Response exhibit greater spread and variability across observations. All outlier observations are detected with 2.3 IQR.*
+*Visualisation 04: Centred and scaled boxplots of all numeric variables using an IQR multiplier of 1.5. The lifestyle variables display comparatively low variability and narrower distributions, while the reagent variables and Response exhibit greater spread and variability across observations. All outlier observations are detected with 2.3 IQR.*
 
 Boxplots were constructed for all numeric variables using the standard 1.5 IQR rule to identify potential outliers. No outliers were detected for the lifestyle variables. When the IQR multiplier was increased from 1.5 to **2.3**, all detected outliers disappeared across every variable.
 
