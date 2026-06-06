@@ -103,7 +103,7 @@ Boxplots were constructed for all numeric variables using the standard 1.5 IQR r
 
 *Visualisation 05: Pearson correlation heatmap for all numeric variables, excluding observations containing missing reagent entries. The heatmap shows generally weak correlations between most variables, with Exercise displaying the strongest relationship with Response (r = −0.57). Several reagent variable pairs exhibit extremely strong positive correlations, indicating substantial multicollinearity.*
 
-The Pearson correlation heatmap shows the linear relationships between all numeric variables. **Exercise** shows the strongest relationship with Response, with a moderate negative correlation of **r = −0.57**. Alcohol and Coffee both show weak positive correlations with Response (r = 0.38 and r = 0.29, respectively).
+The Pearson correlation heatmap shows the linear relationships between all numeric variables. **Exercise** shows the strongest relationship with **Response**, with a moderate negative correlation of **r = −0.57**. **Alcohol** and **Coffee** both show weak positive correlations with **Response** (r = 0.38 and r = 0.29, respectively).
 
 The reagent variables display several very strong positive correlations with one another, with many pairs approaching **r = 1.00**, indicating substantial multicollinearity.
 
