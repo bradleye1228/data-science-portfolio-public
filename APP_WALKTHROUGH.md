@@ -196,14 +196,36 @@ Candidate methods were selected to ensure broad coverage across distinct regress
 
 **Table 02: Candidate Model Performance Summary**
 
-| Method | RMSE | R² | Train Time |
-|--------|------|-----|-------------|
-| **brnn** | **132.88** | **0.979** | 1m 0.7s |
-| gaussprPoly | 163.99 | 0.969 | 2m 16s |
-| svmPoly | 167.62 | 0.968 | 2m 9s |
-| svmRadial | 249.55 | 0.931 | 48.2s |
-| earth | 266.57 | 0.917 | 50.3s |
-| null | 923.14 | N/A | 1.1s |
+| Method | RMSE | RMSESD | R² | R² SD | MAE | MAESD | BestTune | Train Time |
+|--------|------|--------|-----|-------|-----|-------|----------|------------|
+| brnn | 132.88 | 20.8331 | 0.979 | 0.008 | 93.28 | 11.6546 | neurons=4 | 1m 0.7s |
+| gaussprPoly | 163.99 | 10.7008 | 0.969 | 0.0039 | 116.09 | 5.848 | degree=2, scale=0.1 | 2m 16.3s |
+| svmPoly | 167.62 | 10.8598 | 0.968 | 0.0047 | 118.12 | 4.7254 | degree=2, scale=0.1, C=0.25 | 2m 9.5s |
+| svmRadial | 249.55 | 24.3753 | 0.931 | 0.0118 | 165.29 | 10.0782 | sigma=0.0239, C=4 | 48.2s |
+| earth | 266.57 | 21.6372 | 0.917 | 0.0131 | 190.71 | 13.4242 | nprune=20, degree=2 | 50.3s |
+| rvmRadial | 311.60 | 43.2779 | 0.886 | 0.0305 | 226.85 | 27.6946 | sigma=0.001 | 12m 33.9s |
+| gaussprRadial | 344.60 | 27.909 | 0.879 | 0.015 | 234.28 | 14.3975 | sigma=0.01 | 1m 9.4s |
+| ppr | 350.37 | 70.0498 | 0.855 | 0.0626 | 253.85 | 49.1747 | nterms=3 | 1m 5.4s |
+| cubist | 361.66 | 28.6356 | 0.849 | 0.022 | 253.80 | 18.2752 | committees=20, neighbors=5 | 48.3s |
+| bstTree | 403.07 | 23.3853 | 0.817 | 0.0203 | 294.29 | 15.0835 | mstop=200, maxdepth=3, nu=0.1 | 1m 7.8s |
+| blackboost | 448.29 | 27.0808 | 0.782 | 0.024 | 333.22 | 18.4458 | mstop=100, maxdepth=3 | 3m 8.1s |
+| pls | 448.77 | 23.7619 | 0.765 | 0.0178 | 316.71 | 15.4633 | ncomp=5 | 22.4s |
+| pcr | 448.93 | 24.1817 | 0.765 | 0.0178 | 315.60 | 15.2669 | ncomp=16 | 20s |
+| glmnet | 449.31 | 24.0479 | 0.765 | 0.017 | 316.61 | 14.745 | alpha=0.55, lambda=10.4413 | 37.6s |
+| glmboost | 449.41 | 23.9012 | 0.765 | 0.0171 | 316.57 | 14.7843 | mstop=500, prune=no | 14.6s |
+| spikeslab | 449.72 | 23.9525 | 0.764 | 0.0173 | 317.29 | 14.6769 | vars=27 | 44.5s |
+| svmLinear | 450.73 | 23.7402 | 0.763 | 0.0168 | 314.50 | 15.3074 | C=0.1 | 1m 3.5s |
+| rlm | 454.84 | 22.3557 | 0.759 | 0.0151 | 318.19 | 14.1551 | intercept=TRUE, psi=psi.huber | 37.7s |
+| lm | 456.64 | 21.7568 | 0.757 | 0.0156 | 323.06 | 13.2739 | intercept=TRUE | 14.8s |
+| ranger | 481.29 | 30.0347 | 0.785 | 0.0153 | 354.24 | 22.0744 | mtry=20, splitrule=extratrees, min.node.size=5 | 1m 45.8s |
+| qrf | 544.67 | 28.5387 | 0.675 | 0.0321 | 409.30 | 20.8834 | mtry=14 | 2m 7.6s |
+| gam | 603.46 | 116.2609 | 0.621 | 0.0865 | 386.16 | 37.3678 | select=TRUE, method=GCV.Cp | 5m 16.2s |
+| rpart | 741.43 | 29.144 | 0.370 | 0.0381 | 577.41 | 19.1453 | cp=0.0257 | 15.9s |
+| kknn | 782.97 | 35.8327 | 0.333 | 0.0397 | 612.03 | 31.9102 | kmax=13, distance=2, kernel=optimal | 54.4s |
+| neuralnet | 922.88 | 34.3795 | 0.004 | 0.0028 | 723.22 | 27.3333 | layer1=5, layer2=0, layer3=0 | 6m 45.5s |
+| null | 923.14 | 32.9413 | N/A | N/A | 723.84 | 26.2989 | parameter=none | 1.1s |
+| mlpWeightDecayML | 1374.25 | 267.9432 | 0.049 | 0.0422 | 1101.54 | 215.2083 | layer1=7, layer2=0, layer3=0, decay=0.001 | 2m 2.8s |
+| avNNet | 3147.80 | 35.5587 | N/A | N/A | 3010.75 | 34.1256 | size=1, decay=0.01, bag=FALSE | 1m 56.4s |
 
 ![Resampling Statistics](screenshots/resampled_stat_1.png)
 
