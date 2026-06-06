@@ -29,7 +29,7 @@ The dashboard combines exploratory data analysis, recipe preprocessing, machine 
 
 ![Introduction](screenshots/intro.png)
 
-*Visualisation 01: Dashboard introduction page showing the project overview and key findings.*
+*Visualisation 01: Dashboard introduction page showing the dataset overview statistics.*
 
 The dataset used in this data analysis is named `Ass3Data.csv`, which is an artificially generated dataset designed to simulate recorded health data of a particular response variable named **Response**. The dataset has a file size of approximately 323 KB and contains **969 rows** of observations and **21 columns** of variables, giving a total of 20,349 cells.
 
