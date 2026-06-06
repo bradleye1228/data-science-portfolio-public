@@ -332,7 +332,7 @@ The relatively small difference between the training RMSE (73.8) and testing RMS
 
 ![new_transparent_03_recipe_info](screenshots/new_transparent_03_recipe_info.png)
 
-*Visualisation 24:* 
+*Visualisation 24:* Landing on best alpha of 1 and regularsion lambda parameter of 0.726. landed on using 154 coefficintes to make the model.
 
 
 
