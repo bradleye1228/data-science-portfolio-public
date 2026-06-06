@@ -1,6 +1,6 @@
 # NZ Crash Data Dashboard - Application Walkthrough
 
-This document provides a visual walkthrough of the **NZ Crash Data Dashboard**, an interactive web application developed for **COSC480 Assignment 3** at the **University of Canterbury**.
+This document provides a visual walkthrough of the **NZ Crash Data Dashboard**, an interactive web application developed for ** Introduction to python: COSC480 Assignment 3** at the **University of Canterbury**.
 
 The application uses crash data sourced from the New Zealand Transport Agency (Waka Kotahi) Crash Analysis System (CAS) and allows users to explore road safety trends across New Zealand through interactive filtering, mapping, and visualisation tools.
 
