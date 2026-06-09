@@ -41,7 +41,7 @@ Interactive Streamlit dashboard analysing New Zealand road crash data (2000–20
 
 ## Contact
 
-**LinkedIn:** [linkedin.com/in/eduard-bradley-a7b0241ba](https://www.linkedin.com/in/eduard-bradley-a7b0241ba/)
+**LinkedIn:** [linkedin.com/in/eduard-bradley-profile](www.linkedin.com/in/eduard-bradley-profile)
 
 **Email:** [bradleye1228@gmail.com](mailto:bradleye1228@gmail.com)
 
