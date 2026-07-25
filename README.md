@@ -9,6 +9,8 @@ Date: 01/06/2025
 
 The aim of this project for A3 was to develop an interactive dashboard that analysing of road crash data in New Zealand. The dataset that was sourced from Waka Kotahi (NZ Transport Agency) and contains reported crashes from 2000 to 2024 in its current form.  
 
+**[Launch the Dashboard](https://nz-crash-clean-bradley.streamlit.app/)**
+
 The dashboard was created using Streamlit as the primary framework due to its flexibility in developing web-based data applications and supporting interactive user input. Users can filter the dataset using sliders, sliders, dropdown menus, and checkboxes to explore trends and patterns. One of Streamlit’s key benefits is the ability to export filtered data directly as a downloadable CSV file alongside the visualisations that are generated. 
 
 **The application supports several visualisations to enhance understanding**:
@@ -81,7 +83,7 @@ This application is designed to run through the terminal in Visual Studio Code (
 
 4. Wait for the terminal to come with the working directory path. From there, please enter the following into the terminal:
 
-streamlit run a3_project_streamlit.py
+`streamlit run a3_project_streamlit.py`
 
 The above text that needs to be entered can also be found at the bottom of the application with a hashtag that has to be removed before entering. 
 
