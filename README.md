@@ -11,11 +11,15 @@ The aim of this project for A3 was to develop an interactive dashboard that anal
 
 The dashboard was created using Streamlit as the primary framework due to its flexibility in developing web-based data applications and supporting interactive user input. Users can filter the dataset using sliders, sliders, dropdown menus, and checkboxes to explore trends and patterns. One of Streamlit’s key benefits is the ability to export filtered data directly as a downloadable CSV file alongside the visualisations that are generated. 
 
-The application supports several visualisations to enhance understanding:
+**The application supports several visualisations to enhance understanding**:
 
 •	A regional heatmap (choropleth map) showing crash density by area.
+
 •	A bar chart comparing total crashes per region.
+
 •	A time-series line graph showing yearly trends.
+
+
 
 The dashboard dynamically reads the CSV crash dataset and supports future updates (provided the column structure remains the same). Filtering options include crash year, severity, speed limits, and region. All of these aspects help users to carry out meaningful and insightful analysis of road safety. 
 
@@ -24,16 +28,21 @@ The dashboard dynamically reads the CSV crash dataset and supports future update
 
 The original version of the programme (from A1 and A2) provided basic static reports of crash data. Users could select a specific year and speed limit to generate a summary crash severity table. A time-series graph allowed to select a year range and severity type as well. However, both these features required restarting the script to change filters each time. There was no geographic filtering or real-time interactivity. 
 
-The current web-based dashboard has significantly improved on its functionality. Users can now:
+**The current web-based dashboard has significantly improved on its functionality. Users can now**:
 
 •	Filter crashes by year range, road speed limit, and severity type. 
+
 •	Visualise crash distributions through a labelled choropleth map with each region. 
+
 •	Compare regional crash totals using bar charts and sortable table.
+
 •	Analyse trends over time using a dynamic line graph. 
+
 • Ability to download all visualisations as PNGs with filtered criteria. 
+
 •	Export filtered datasets as a CSV file. 
 
-Example: A user may filter for “Fatal Crashes between 2015 and 2020 on roads with 50-90 km/h speed limits” and immediately see a heat map of high-risk regions. The bar chart and line graph can then be used to focus on those specific regions and observe total and trends over time. That user can make a report from this analysis with exported PNG's of the visualisation and a exported CSV of the filtered dataset as needed. 
+*Example: A user may filter for “Fatal Crashes between 2015 and 2020 on roads with 50-90 km/h speed limits” and immediately see a heat map of high-risk regions. The bar chart and line graph can then be used to focus on those specific regions and observe total and trends over time. That user can make a report from this analysis with exported PNG's of the visualisation and a exported CSV of the filtered dataset as needed*. 
 
 
 
@@ -100,13 +109,13 @@ Designed clear, uncluttered charts. Region labels on maps are well positioned an
 
 ## Student-Led Innovations:
 
-•	Geospatial Integration:
+•	**Geospatial Integration**:
 Merged CSV crash data with regional shapefiles using GeoPandas and resoved discrepancies in region names (e.g., mapping “Auckland Region” to “Auckland”) and excluded “Other Region Areas” from the visualisation. 
 
-•	Custom Visual Design (Choropleth Maps):
+•	**Custom Visual Design (Choropleth Maps)**:
 Developed a consistent and informative visual theme using Matplotlib and GeoPandas. The use of the choropleth maps was inspired by examples from Towards Data Science and Analytics Vidhya, which demonstrated techniques for colouring geographical areas based on real data. This approach was adapted for this project to show crash densities across New Zealand regions using the “YlOrRd” colour palette and labelled region annotations for clarity.
 
-•	Dynamic User Interface:
+•	**Dynamic User Interface**:
 Employed Streamlit’s expanders to simplify the layout and reduce visual clutter (e.g., collapsible time-series graph) for better user-friendliness.
 
 
