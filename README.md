@@ -41,17 +41,13 @@ Example: A user may filter for “Fatal Crashes between 2015 and 2020 on roads w
 Python Libraries:
 
 •	Streamlit (v1.32+) – used for creating the web application interface.
-
 •	Pandas (v2.0+) – for structured data manipulation.
-
 •	Geopandas (v0.14+) – for reading and working with shapefiles.
-
 •	Matplotlib (v3.8+) – for generating graphs and plots.
 
 
 Data sources:
 •	Crash data: Waka Kotahi Open Data Portal – Crash Analysis System (CAS) 
-
 •	Regional boundaries: Stats NZ – Regional Council 2025 Shapefile
 
 
@@ -66,7 +62,7 @@ This application is designed to run through the terminal in Visual Studio Code (
 
 pip install streamlit pandas geopandas matplotlib  
 
- 3. Press Run Python File on “streamlit_crash_data_map.py” to initialise any setup or review output messages. At this stage, there will be warning messages appearing in the terminal (as they are not being directly run on Streamlit’s application). These are expected and can be ignored unless they indicate missing packages or critical errors. 
+3. Press Run Python File on “streamlit_crash_data_map.py” to initialise any setup or review output messages. At this stage, there will be warning messages appearing in the terminal (as they are not being directly run on Streamlit’s application). These are expected and can be ignored unless they indicate missing packages or critical errors. 
 
 4. Wait for the terminal to come with the working directory path. From there, please enter the following into the terminal:
 
