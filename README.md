@@ -29,7 +29,7 @@ The current web-based dashboard has significantly improved on its functionality.
 •	Visualise crash distributions through a labelled choropleth map with each region. 
 •	Compare regional crash totals using bar charts and sortable table.
 •	Analyse trends over time using a dynamic line graph. 
-•   Ability to download all visualisations as PNGs with filtered criteria. 
+• Ability to download all visualisations as PNGs with filtered criteria. 
 •	Export filtered datasets as a CSV file. 
 
 Example: A user may filter for “Fatal Crashes between 2015 and 2020 on roads with 50-90 km/h speed limits” and immediately see a heat map of high-risk regions. The bar chart and line graph can then be used to focus on those specific regions and observe total and trends over time. That user can make a report from this analysis with exported PNG's of the visualisation and a exported CSV of the filtered dataset as needed. 
@@ -41,13 +41,17 @@ Example: A user may filter for “Fatal Crashes between 2015 and 2020 on roads w
 Python Libraries:
 
 •	Streamlit (v1.32+) – used for creating the web application interface.
+
 •	Pandas (v2.0+) – for structured data manipulation.
+
 •	Geopandas (v0.14+) – for reading and working with shapefiles.
+
 •	Matplotlib (v3.8+) – for generating graphs and plots.
 
 
 Data sources:
 •	Crash data: Waka Kotahi Open Data Portal – Crash Analysis System (CAS) 
+
 •	Regional boundaries: Stats NZ – Regional Council 2025 Shapefile
 
 
