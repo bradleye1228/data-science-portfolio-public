@@ -25,6 +25,7 @@ The dashboard dynamically reads the CSV crash dataset and supports future update
 The original version of the programme (from A1 and A2) provided basic static reports of crash data. Users could select a specific year and speed limit to generate a summary crash severity table. A time-series graph allowed to select a year range and severity type as well. However, both these features required restarting the script to change filters each time. There was no geographic filtering or real-time interactivity. 
 
 The current web-based dashboard has significantly improved on its functionality. Users can now:
+
 •	Filter crashes by year range, road speed limit, and severity type. 
 •	Visualise crash distributions through a labelled choropleth map with each region. 
 •	Compare regional crash totals using bar charts and sortable table.
@@ -38,16 +39,21 @@ Example: A user may filter for “Fatal Crashes between 2015 and 2020 on roads w
 
 ## Dependencies and Data Sources:
 
-Python Libraries:
+**Python Libraries**:
 
 •	Streamlit (v1.32+) – used for creating the web application interface.
+
 •	Pandas (v2.0+) – for structured data manipulation.
+
 •	Geopandas (v0.14+) – for reading and working with shapefiles.
+
 •	Matplotlib (v3.8+) – for generating graphs and plots.
 
 
-Data sources:
-•	Crash data: Waka Kotahi Open Data Portal – Crash Analysis System (CAS) 
+**Data sources**:
+
+•	Crash data: Waka Kotahi Open Data Portal – Crash Analysis System (CAS)
+
 •	Regional boundaries: Stats NZ – Regional Council 2025 Shapefile
 
 
