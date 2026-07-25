@@ -75,7 +75,7 @@ This application is designed to run through the terminal in Visual Studio Code (
 
 2. Install the following dependencies by opening the terminal and entering:
 
-pip install streamlit pandas geopandas matplotlib  
+`pip install streamlit pandas geopandas matplotlib`  
 
 3. Press Run Python File on “streamlit_crash_data_map.py” to initialise any setup or review output messages. At this stage, there will be warning messages appearing in the terminal (as they are not being directly run on Streamlit’s application). These are expected and can be ignored unless they indicate missing packages or critical errors. 
 
